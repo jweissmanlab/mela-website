@@ -1,6 +1,6 @@
-# MELT website
+# MELA website
 
-Companion website for the **MELT** (Mouse Embryonic Lineage and Transcriptome)
+Companion website for the **MELA** (Mouse Embryonic Lineage Atlas)
 paper. A static site with five pages: Home, Explore (embeds the data-exploration
 tool), Linkage (interactive heatmap), Fate (interactive Sankey), and Download
 (Zenodo links).
@@ -15,10 +15,10 @@ npm install        # once
 npm run dev        # dev server with hot reload
 ```
 
-Then open the URL printed in the terminal — note the `/melt-website` path:
+Then open the URL printed in the terminal — note the `/mela-website` path:
 
 ```
-http://localhost:4321/melt-website
+http://localhost:4321/mela-website
 ```
 
 > **On a remote Linux server?** See [Viewing from a remote server](#viewing-from-a-remote-server) below.
@@ -43,7 +43,7 @@ ssh -L 4321:localhost:4321 <user>@<server>
 # then, on the server:
 npm run dev
 # then, in your local browser:
-#   http://localhost:4321/melt-website
+#   http://localhost:4321/mela-website
 ```
 
 **B. Expose on the network** — if your computer can reach the server's IP
@@ -51,7 +51,7 @@ directly (e.g. same institute network):
 
 ```bash
 npm run dev -- --host        # prints a Network URL
-# open http://<server-ip>:4321/melt-website from your browser
+# open http://<server-ip>:4321/mela-website from your browser
 ```
 
 `npm run preview` supports the same `-- --host` flag and SSH-forwarding approach.
@@ -89,11 +89,11 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
 and publishes it to GitHub Pages at:
 
 ```
-https://jweissmanlab.github.io/melt-website/
+https://jweissmanlab.github.io/mela-website/
 ```
 
 Enable it once under **Settings → Pages → Source: GitHub Actions**. The
-`base: '/melt-website'` in `astro.config.mjs` matches this project-pages URL; if
+`base: '/mela-website'` in `astro.config.mjs` matches this project-pages URL; if
 the repo/URL changes, update `site` and `base` there.
 
 ## Notes
