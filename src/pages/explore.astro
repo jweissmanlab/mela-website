@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import EmbedFrame from '../components/EmbedFrame.astro';
+import { SITE } from '../config/site';
+---
+
+<Base title="Explore" description="Browse the MELT single-cell atlas interactively.">
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Explore</p>
+      <h1>Browse the atlas interactively</h1>
+      <p class="lead">
+        The exploration tool lets you navigate the full MELT single-cell atlas —
+        search genes, inspect cell-type annotations, and follow lineage
+        structure across embryonic stages.
+      </p>
+    </div>
+
+    <div class="embed-wrap">
+      <EmbedFrame src={SITE.exploreUrl} title="MELT data exploration tool" />
+    </div>
+
+    <p class="note">
+      Hosted on the institute network. If the viewer above is blank, use
+      <a href={SITE.exploreUrl} target="_blank" rel="noopener noreferrer">
+        Open in new tab
+      </a>. A public link will replace this embed once available.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .head {
+    margin-bottom: 2rem;
+  }
+  .embed-wrap {
+    margin-top: 1rem;
+  }
+  .note {
+    margin-top: 1rem;
+    font-size: var(--fs-small);
+    color: var(--ink-3);
+  }
+</style>

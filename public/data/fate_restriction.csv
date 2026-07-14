@@ -1,0 +1,319 @@
+source_time,target_time,source,target,count
+4.5,5.0,Uncommitted,Uncommitted,44
+4.5,5.0,Uncommitted,Paraxial mesoderm,3
+4.5,5.0,Paraxial mesoderm,Paraxial mesoderm,3
+4.5,5.0,Uncommitted,Neural crest,1
+4.5,5.0,Uncommitted,Neural ectoderm,1
+4.5,5.0,Endoderm,Endoderm,1
+4.5,5.0,Uncommitted,Lateral plate mesoderm,1
+4.5,5.0,Neural ectoderm,Neural ectoderm,1
+4.5,5.0,Lateral plate mesoderm,Lateral plate mesoderm,1
+4.5,5.0,Uncommitted,Endoderm,1
+5.0,5.5,Uncommitted,Uncommitted,82
+5.0,5.5,Uncommitted,Lateral plate mesoderm,5
+5.0,5.5,Paraxial mesoderm,Paraxial mesoderm,6
+5.0,5.5,Uncommitted,Endoderm,4
+5.0,5.5,Uncommitted,Mesoderm,11
+5.0,5.5,Uncommitted,Paraxial mesoderm,2
+5.0,5.5,Neural crest,Neural crest,1
+5.0,5.5,Neural ectoderm,Neural ectoderm,2
+5.0,5.5,Uncommitted,Neural ectoderm,6
+5.0,5.5,Uncommitted,Ectoderm,8
+5.0,5.5,Endoderm,Endoderm,3
+5.0,5.5,Lateral plate mesoderm,Lateral plate mesoderm,2
+5.0,5.5,Uncommitted,Blood,2
+5.0,5.5,Uncommitted,Intermediate mesoderm,1
+5.0,5.5,Uncommitted,Neural crest,1
+5.5,6.0,Uncommitted,Uncommitted,155
+5.5,6.0,Uncommitted,Mesoderm,36
+5.5,6.0,Uncommitted,Neural ectoderm,24
+5.5,6.0,Uncommitted,Intermediate mesoderm,4
+5.5,6.0,Uncommitted,Ectoderm,20
+5.5,6.0,Uncommitted,Surface ectoderm,4
+5.5,6.0,Uncommitted,Paraxial mesoderm,12
+5.5,6.0,Uncommitted,Neural crest,2
+5.5,6.0,Uncommitted,Endoderm,11
+5.5,6.0,Lateral plate mesoderm,Lateral plate mesoderm,9
+5.5,6.0,Paraxial mesoderm,Paraxial mesoderm,8
+5.5,6.0,Endoderm,Endoderm,8
+5.5,6.0,Mesoderm,Mesoderm,16
+5.5,6.0,Uncommitted,Lateral plate mesoderm,7
+5.5,6.0,Mesoderm,Lateral plate mesoderm,5
+5.5,6.0,Mesoderm,Blood,4
+5.5,6.0,Neural crest,Neural crest,2
+5.5,6.0,Neural ectoderm,Neural ectoderm,11
+5.5,6.0,Ectoderm,Ectoderm,9
+5.5,6.0,Uncommitted,Extraembryonic mesoderm,1
+5.5,6.0,Ectoderm,Surface ectoderm,1
+5.5,6.0,Mesoderm,Paraxial mesoderm,3
+5.5,6.0,Blood,Blood,2
+5.5,6.0,Uncommitted,Blood,1
+5.5,6.0,Intermediate mesoderm,Intermediate mesoderm,1
+5.5,6.0,Ectoderm,Neural ectoderm,1
+5.5,6.0,Mesoderm,Neural crest,1
+6.0,6.5,Uncommitted,Paraxial mesoderm,41
+6.0,6.5,Uncommitted,Uncommitted,182
+6.0,6.5,Uncommitted,Mesoderm,93
+6.0,6.5,Mesoderm,Mesoderm,70
+6.0,6.5,Uncommitted,Neural ectoderm,62
+6.0,6.5,Uncommitted,Ectoderm,55
+6.0,6.5,Neural ectoderm,Neural ectoderm,50
+6.0,6.5,Uncommitted,Intermediate mesoderm,2
+6.0,6.5,Uncommitted,Neural crest,13
+6.0,6.5,Intermediate mesoderm,Intermediate mesoderm,5
+6.0,6.5,Mesoderm,Paraxial mesoderm,14
+6.0,6.5,Ectoderm,Ectoderm,33
+6.0,6.5,Uncommitted,Lateral plate mesoderm,32
+6.0,6.5,Uncommitted,Surface ectoderm,10
+6.0,6.5,Surface ectoderm,Surface ectoderm,7
+6.0,6.5,Uncommitted,Endoderm,44
+6.0,6.5,Paraxial mesoderm,Paraxial mesoderm,29
+6.0,6.5,Uncommitted,Blood,2
+6.0,6.5,Uncommitted,Extraembryonic mesoderm,4
+6.0,6.5,Neural crest,Neural crest,5
+6.0,6.5,Endoderm,Endoderm,29
+6.0,6.5,Mesoderm,Lateral plate mesoderm,17
+6.0,6.5,Mesoderm,Extraembryonic mesoderm,9
+6.0,6.5,Lateral plate mesoderm,Lateral plate mesoderm,24
+6.0,6.5,Ectoderm,Neural ectoderm,12
+6.0,6.5,Blood,Blood,10
+6.0,6.5,Mesoderm,Endoderm,1
+6.0,6.5,Extraembryonic mesoderm,Extraembryonic mesoderm,1
+6.0,6.5,Ectoderm,Neural crest,2
+6.0,6.5,Ectoderm,Surface ectoderm,2
+6.0,6.5,Mesoderm,Blood,4
+6.0,6.5,Mesoderm,Intermediate mesoderm,1
+6.0,6.5,Ectoderm,Lateral plate mesoderm,1
+6.5,7.0,Paraxial mesoderm,Paraxial mesoderm,155
+6.5,7.0,Uncommitted,Uncommitted,189
+6.5,7.0,Mesoderm,Mesoderm,257
+6.5,7.0,Mesoderm,Paraxial mesoderm,78
+6.5,7.0,Mesoderm,Lateral plate mesoderm,88
+6.5,7.0,Uncommitted,Neural crest,20
+6.5,7.0,Uncommitted,Neural ectoderm,124
+6.5,7.0,Uncommitted,Paraxial mesoderm,92
+6.5,7.0,Uncommitted,Lateral plate mesoderm,43
+6.5,7.0,Uncommitted,Ectoderm,68
+6.5,7.0,Neural ectoderm,Neural ectoderm,202
+6.5,7.0,Uncommitted,Surface ectoderm,22
+6.5,7.0,Ectoderm,Surface ectoderm,27
+6.5,7.0,Ectoderm,Ectoderm,112
+6.5,7.0,Uncommitted,Mesoderm,83
+6.5,7.0,Intermediate mesoderm,Intermediate mesoderm,8
+6.5,7.0,Neural crest,Neural crest,21
+6.5,7.0,Ectoderm,Neural ectoderm,57
+6.5,7.0,Lateral plate mesoderm,Lateral plate mesoderm,135
+6.5,7.0,Surface ectoderm,Surface ectoderm,24
+6.5,7.0,Mesoderm,Blood,6
+6.5,7.0,Mesoderm,Endoderm,5
+6.5,7.0,Mesoderm,Extraembryonic mesoderm,9
+6.5,7.0,Uncommitted,Endoderm,36
+6.5,7.0,Endoderm,Endoderm,143
+6.5,7.0,Blood,Blood,32
+6.5,7.0,Extraembryonic mesoderm,Extraembryonic mesoderm,22
+6.5,7.0,Ectoderm,Neural crest,20
+6.5,7.0,Mesoderm,Extraembryonic ectoderm,1
+6.5,7.0,Mesoderm,Neural ectoderm,2
+6.5,7.0,Uncommitted,Intermediate mesoderm,1
+6.5,7.0,Ectoderm,Paraxial mesoderm,2
+6.5,7.0,Uncommitted,Extraembryonic mesoderm,1
+6.5,7.0,Ectoderm,Endoderm,1
+6.5,7.0,Ectoderm,Lateral plate mesoderm,1
+7.0,7.5,Paraxial mesoderm,Paraxial mesoderm,739
+7.0,7.5,Uncommitted,Mesoderm,105
+7.0,7.5,Uncommitted,Paraxial mesoderm,186
+7.0,7.5,Uncommitted,Uncommitted,167
+7.0,7.5,Uncommitted,Lateral plate mesoderm,105
+7.0,7.5,Uncommitted,Ectoderm,96
+7.0,7.5,Mesoderm,Mesoderm,610
+7.0,7.5,Mesoderm,Paraxial mesoderm,256
+7.0,7.5,Lateral plate mesoderm,Lateral plate mesoderm,527
+7.0,7.5,Mesoderm,Lateral plate mesoderm,232
+7.0,7.5,Uncommitted,Neural ectoderm,277
+7.0,7.5,Neural crest,Neural crest,109
+7.0,7.5,Neural ectoderm,Neural ectoderm,767
+7.0,7.5,Ectoderm,Neural ectoderm,289
+7.0,7.5,Ectoderm,Ectoderm,282
+7.0,7.5,Ectoderm,Neural crest,259
+7.0,7.5,Ectoderm,Surface ectoderm,91
+7.0,7.5,Uncommitted,Surface ectoderm,125
+7.0,7.5,Surface ectoderm,Surface ectoderm,155
+7.0,7.5,Uncommitted,Extraembryonic ectoderm,24
+7.0,7.5,Uncommitted,Neural crest,76
+7.0,7.5,Intermediate mesoderm,Intermediate mesoderm,9
+7.0,7.5,Mesoderm,Blood,2
+7.0,7.5,Blood,Blood,63
+7.0,7.5,Mesoderm,Endoderm,5
+7.0,7.5,Endoderm,Endoderm,352
+7.0,7.5,Extraembryonic mesoderm,Extraembryonic mesoderm,60
+7.0,7.5,Mesoderm,Intermediate mesoderm,8
+7.0,7.5,Mesoderm,Neural ectoderm,4
+7.0,7.5,Ectoderm,Extraembryonic ectoderm,11
+7.0,7.5,Mesoderm,Extraembryonic mesoderm,18
+7.0,7.5,Ectoderm,Lateral plate mesoderm,3
+7.0,7.5,Uncommitted,Endoderm,33
+7.0,7.5,Extraembryonic ectoderm,Extraembryonic ectoderm,3
+7.0,7.5,Uncommitted,Intermediate mesoderm,3
+7.0,7.5,Mesoderm,Surface ectoderm,1
+7.0,7.5,Uncommitted,Extraembryonic mesoderm,4
+7.0,7.5,Uncommitted,Blood,1
+7.0,7.5,Ectoderm,Mesoderm,1
+7.5,8.0,Paraxial mesoderm,Paraxial mesoderm,2899
+7.5,8.0,Mesoderm,Paraxial mesoderm,591
+7.5,8.0,Mesoderm,Lateral plate mesoderm,734
+7.5,8.0,Uncommitted,Lateral plate mesoderm,107
+7.5,8.0,Uncommitted,Mesoderm,112
+7.5,8.0,Uncommitted,Intermediate mesoderm,17
+7.5,8.0,Uncommitted,Surface ectoderm,67
+7.5,8.0,Uncommitted,Uncommitted,193
+7.5,8.0,Lateral plate mesoderm,Lateral plate mesoderm,1890
+7.5,8.0,Ectoderm,Surface ectoderm,328
+7.5,8.0,Ectoderm,Neural ectoderm,758
+7.5,8.0,Ectoderm,Ectoderm,398
+7.5,8.0,Ectoderm,Neural crest,1074
+7.5,8.0,Mesoderm,Mesoderm,1241
+7.5,8.0,Uncommitted,Paraxial mesoderm,405
+7.5,8.0,Uncommitted,Neural ectoderm,568
+7.5,8.0,Mesoderm,Neural crest,5
+7.5,8.0,Neural ectoderm,Neural ectoderm,3661
+7.5,8.0,Neural crest,Neural crest,1311
+7.5,8.0,Surface ectoderm,Surface ectoderm,1151
+7.5,8.0,Ectoderm,Mesoderm,1
+7.5,8.0,Mesoderm,Extraembryonic mesoderm,25
+7.5,8.0,Uncommitted,Ectoderm,80
+7.5,8.0,Mesoderm,Intermediate mesoderm,74
+7.5,8.0,Ectoderm,Paraxial mesoderm,17
+7.5,8.0,Extraembryonic ectoderm,Extraembryonic ectoderm,62
+7.5,8.0,Ectoderm,Lateral plate mesoderm,8
+7.5,8.0,Uncommitted,Extraembryonic ectoderm,8
+7.5,8.0,Uncommitted,Neural crest,124
+7.5,8.0,Intermediate mesoderm,Intermediate mesoderm,30
+7.5,8.0,Blood,Blood,103
+7.5,8.0,Endoderm,Endoderm,715
+7.5,8.0,Ectoderm,Extraembryonic ectoderm,25
+7.5,8.0,Mesoderm,Neural ectoderm,5
+7.5,8.0,Extraembryonic mesoderm,Extraembryonic mesoderm,157
+7.5,8.0,Ectoderm,Endoderm,1
+7.5,8.0,Uncommitted,Endoderm,8
+7.5,8.0,Mesoderm,Surface ectoderm,3
+7.5,8.0,Ectoderm,Intermediate mesoderm,1
+7.5,8.0,Mesoderm,Endoderm,4
+7.5,8.0,Mesoderm,Extraembryonic ectoderm,1
+7.5,8.0,Mesoderm,Blood,4
+8.0,8.5,Paraxial mesoderm,Paraxial mesoderm,9663
+8.0,8.5,Lateral plate mesoderm,Lateral plate mesoderm,7466
+8.0,8.5,Mesoderm,Mesoderm,1823
+8.0,8.5,Mesoderm,Lateral plate mesoderm,1722
+8.0,8.5,Intermediate mesoderm,Intermediate mesoderm,185
+8.0,8.5,Surface ectoderm,Surface ectoderm,3794
+8.0,8.5,Uncommitted,Mesoderm,44
+8.0,8.5,Uncommitted,Lateral plate mesoderm,53
+8.0,8.5,Uncommitted,Surface ectoderm,24
+8.0,8.5,Uncommitted,Uncommitted,205
+8.0,8.5,Uncommitted,Neural ectoderm,765
+8.0,8.5,Uncommitted,Ectoderm,39
+8.0,8.5,Uncommitted,Paraxial mesoderm,669
+8.0,8.5,Neural ectoderm,Neural ectoderm,13053
+8.0,8.5,Ectoderm,Surface ectoderm,244
+8.0,8.5,Ectoderm,Neural ectoderm,1390
+8.0,8.5,Neural crest,Neural crest,5952
+8.0,8.5,Mesoderm,Paraxial mesoderm,1329
+8.0,8.5,Mesoderm,Intermediate mesoderm,350
+8.0,8.5,Ectoderm,Ectoderm,321
+8.0,8.5,Ectoderm,Neural crest,1292
+8.0,8.5,Ectoderm,Lateral plate mesoderm,7
+8.0,8.5,Extraembryonic mesoderm,Extraembryonic mesoderm,330
+8.0,8.5,Mesoderm,Neural ectoderm,13
+8.0,8.5,Uncommitted,Intermediate mesoderm,16
+8.0,8.5,Uncommitted,Extraembryonic ectoderm,9
+8.0,8.5,Ectoderm,Paraxial mesoderm,61
+8.0,8.5,Extraembryonic ectoderm,Extraembryonic ectoderm,173
+8.0,8.5,Mesoderm,Extraembryonic mesoderm,27
+8.0,8.5,Uncommitted,Endoderm,16
+8.0,8.5,Ectoderm,Extraembryonic ectoderm,33
+8.0,8.5,Uncommitted,Neural crest,53
+8.0,8.5,Blood,Blood,142
+8.0,8.5,Ectoderm,Intermediate mesoderm,2
+8.0,8.5,Endoderm,Endoderm,1333
+8.0,8.5,Mesoderm,Surface ectoderm,18
+8.0,8.5,Ectoderm,Mesoderm,2
+8.0,8.5,Mesoderm,Neural crest,7
+8.0,8.5,Mesoderm,Blood,3
+8.0,8.5,Ectoderm,Endoderm,1
+8.0,8.5,Mesoderm,Extraembryonic ectoderm,1
+8.5,9.0,Paraxial mesoderm,Paraxial mesoderm,21366
+8.5,9.0,Lateral plate mesoderm,Lateral plate mesoderm,18019
+8.5,9.0,Mesoderm,Paraxial mesoderm,923
+8.5,9.0,Mesoderm,Mesoderm,1883
+8.5,9.0,Mesoderm,Lateral plate mesoderm,1182
+8.5,9.0,Mesoderm,Intermediate mesoderm,488
+8.5,9.0,Intermediate mesoderm,Intermediate mesoderm,680
+8.5,9.0,Surface ectoderm,Surface ectoderm,7331
+8.5,9.0,Uncommitted,Paraxial mesoderm,374
+8.5,9.0,Uncommitted,Uncommitted,219
+8.5,9.0,Uncommitted,Neural ectoderm,293
+8.5,9.0,Neural ectoderm,Neural ectoderm,30287
+8.5,9.0,Ectoderm,Neural ectoderm,1067
+8.5,9.0,Ectoderm,Ectoderm,106
+8.5,9.0,Ectoderm,Neural crest,724
+8.5,9.0,Uncommitted,Extraembryonic ectoderm,5
+8.5,9.0,Neural crest,Neural crest,12796
+8.5,9.0,Mesoderm,Extraembryonic mesoderm,20
+8.5,9.0,Mesoderm,Neural crest,7
+8.5,9.0,Ectoderm,Paraxial mesoderm,57
+8.5,9.0,Extraembryonic mesoderm,Extraembryonic mesoderm,476
+8.5,9.0,Mesoderm,Neural ectoderm,22
+8.5,9.0,Extraembryonic ectoderm,Extraembryonic ectoderm,302
+8.5,9.0,Mesoderm,Surface ectoderm,5
+8.5,9.0,Ectoderm,Surface ectoderm,89
+8.5,9.0,Ectoderm,Lateral plate mesoderm,11
+8.5,9.0,Endoderm,Endoderm,1953
+8.5,9.0,Ectoderm,Extraembryonic ectoderm,25
+8.5,9.0,Blood,Blood,174
+8.5,9.0,Uncommitted,Lateral plate mesoderm,26
+8.5,9.0,Uncommitted,Intermediate mesoderm,10
+8.5,9.0,Uncommitted,Mesoderm,7
+8.5,9.0,Uncommitted,Endoderm,4
+8.5,9.0,Uncommitted,Surface ectoderm,16
+8.5,9.0,Uncommitted,Neural crest,18
+8.5,9.0,Ectoderm,Mesoderm,1
+8.5,9.0,Ectoderm,Intermediate mesoderm,1
+8.5,9.0,Uncommitted,Ectoderm,3
+8.5,9.0,Ectoderm,Endoderm,2
+8.5,9.0,Mesoderm,Extraembryonic ectoderm,2
+8.5,9.0,Mesoderm,Blood,1
+8.5,9.0,Mesoderm,Endoderm,1
+8.5,9.0,Ectoderm,Extraembryonic mesoderm,1
+9.0,9.5,Paraxial mesoderm,Paraxial mesoderm,26390
+9.0,9.5,Lateral plate mesoderm,Lateral plate mesoderm,22727
+9.0,9.5,Mesoderm,Mesoderm,1865
+9.0,9.5,Mesoderm,Intermediate mesoderm,100
+9.0,9.5,Mesoderm,Lateral plate mesoderm,171
+9.0,9.5,Intermediate mesoderm,Intermediate mesoderm,1295
+9.0,9.5,Surface ectoderm,Surface ectoderm,8598
+9.0,9.5,Mesoderm,Paraxial mesoderm,123
+9.0,9.5,Uncommitted,Uncommitted,248
+9.0,9.5,Neural ectoderm,Neural ectoderm,37633
+9.0,9.5,Ectoderm,Neural ectoderm,113
+9.0,9.5,Ectoderm,Neural crest,90
+9.0,9.5,Neural crest,Neural crest,15653
+9.0,9.5,Extraembryonic ectoderm,Extraembryonic ectoderm,366
+9.0,9.5,Extraembryonic mesoderm,Extraembryonic mesoderm,542
+9.0,9.5,Mesoderm,Extraembryonic mesoderm,5
+9.0,9.5,Ectoderm,Ectoderm,55
+9.0,9.5,Ectoderm,Paraxial mesoderm,9
+9.0,9.5,Uncommitted,Neural ectoderm,41
+9.0,9.5,Uncommitted,Paraxial mesoderm,30
+9.0,9.5,Endoderm,Endoderm,2127
+9.0,9.5,Ectoderm,Lateral plate mesoderm,2
+9.0,9.5,Blood,Blood,186
+9.0,9.5,Mesoderm,Neural ectoderm,2
+9.0,9.5,Mesoderm,Endoderm,2
+9.0,9.5,Uncommitted,Surface ectoderm,1
+9.0,9.5,Ectoderm,Extraembryonic ectoderm,1
+9.0,9.5,Uncommitted,Lateral plate mesoderm,2
+9.0,9.5,Uncommitted,Extraembryonic ectoderm,1
+9.0,9.5,Uncommitted,Neural crest,2
+9.0,9.5,Mesoderm,Neural crest,1
+9.0,9.5,Ectoderm,Surface ectoderm,2
+9.0,9.5,Mesoderm,Surface ectoderm,1

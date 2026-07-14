@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import LinkageHeatmap from '../components/LinkageHeatmap';
+---
+
+<Base
+  title="Linkage"
+  description="Interactive heatmap of lineage relationships between cell types."
+>
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Linkage</p>
+      <h1>Lineage relationships between cell types</h1>
+      <p class="lead">
+        Each cell shows the lineage coupling between a pair of cell types —
+        higher scores mean the two share more clonal ancestry. Hover to trace a
+        row and column; click any cell to inspect the pair in detail.
+      </p>
+    </div>
+
+    <div class="card panel">
+      <LinkageHeatmap client:load />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    margin-bottom: 2rem;
+  }
+  .panel {
+    padding: clamp(1rem, 0.5rem + 2vw, 2rem);
+  }
+</style>

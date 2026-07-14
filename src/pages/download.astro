@@ -1,0 +1,179 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, CITATION } from '../config/site';
+
+const files = [
+  {
+    name: 'Processed single-cell atlas',
+    desc: 'AnnData (.h5ad) with transcriptomes, cell-type annotations, and embryo/stage metadata.',
+    format: 'h5ad',
+    size: '~— GB',
+  },
+  {
+    name: 'Reconstructed lineage trees',
+    desc: 'Per-embryo lineage trees with resolved cell divisions (Newick / TreeData).',
+    format: 'nwk / h5td',
+    size: '~— GB',
+  },
+  {
+    name: 'Lineage linkage matrices',
+    desc: 'Cell-type coupling matrices underlying the Linkage heatmap.',
+    format: 'csv',
+    size: '~— MB',
+  },
+  {
+    name: 'Fate-flow tables',
+    desc: 'Progenitor-to-fate flow tables underlying the Fate Sankey.',
+    format: 'csv',
+    size: '~— MB',
+  },
+];
+
+const bibtex = `@article{melt${CITATION.year},
+  title   = {${CITATION.title}},
+  author  = {${CITATION.authors}},
+  journal = {${CITATION.journal}},
+  year    = {${CITATION.year}},
+  doi     = {${CITATION.doi}}
+}`;
+---
+
+<Base title="Download" description="Download the MELT dataset from Zenodo.">
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Download</p>
+      <h1>Data &amp; archive</h1>
+      <p class="lead">
+        The processed data, lineage trees, and analysis tables are archived on
+        Zenodo. Links below point to the record; individual files can be
+        downloaded there.
+      </p>
+      <a class="btn btn-primary" href={SITE.zenodoRecordUrl} target="_blank" rel="noopener">
+        Open Zenodo record ↗
+      </a>
+      <p class="placeholder">
+        Zenodo record is a placeholder — update <code>zenodoRecordUrl</code> in
+        <code>src/config/site.ts</code> once the DOI is minted.
+      </p>
+    </div>
+
+    <ul class="files">
+      {
+        files.map((f) => (
+          <li class="card file">
+            <div class="file__main">
+              <h3>{f.name}</h3>
+              <p>{f.desc}</p>
+            </div>
+            <div class="file__meta">
+              <span class="tag">{f.format}</span>
+              <span class="file__size">{f.size}</span>
+              <a class="btn btn-ghost" href={SITE.zenodoRecordUrl} target="_blank" rel="noopener">
+                Download ↗
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="cite-block card">
+      <p class="eyebrow">Cite this dataset</p>
+      <p class="cite-block__ref">
+        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal}.
+        doi:<a href={`https://doi.org/${CITATION.doi}`}>{CITATION.doi}</a>
+      </p>
+      <details>
+        <summary>BibTeX</summary>
+        <pre>{bibtex}</pre>
+      </details>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    margin-bottom: 2.5rem;
+  }
+  .placeholder {
+    margin-top: 1rem;
+    font-size: var(--fs-small);
+    color: var(--ink-3);
+  }
+  code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--paper-2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  .files {
+    list-style: none;
+    margin: 0 0 3rem;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .file__main {
+    flex: 1;
+    min-width: 240px;
+  }
+  .file__main h3 {
+    margin-bottom: 0.2rem;
+  }
+  .file__main p {
+    color: var(--ink-2);
+    font-size: var(--fs-small);
+    margin: 0;
+  }
+  .file__meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: var(--fs-tiny);
+    color: var(--accent-ink);
+    background: var(--accent-tint);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  .file__size {
+    font-size: var(--fs-small);
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  .cite-block {
+    padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  }
+  .cite-block__ref {
+    font-size: 1.1rem;
+    max-width: 62ch;
+  }
+  details summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: var(--fs-small);
+    font-weight: 600;
+  }
+  pre {
+    background: var(--ink);
+    color: #eee;
+    padding: 1rem;
+    border-radius: var(--r-sm);
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
+</style>

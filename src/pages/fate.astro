@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import FateSankey from '../components/FateSankey';
+---
+
+<Base
+  title="Fate"
+  description="Interactive Sankey of how progenitors flow into fates across development."
+>
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Fate</p>
+      <h1>Lineage restriction over time</h1>
+      <p class="lead">
+        As cells divide they progressively commit — from uncommitted, to a germ
+        layer, to a lineage. Each band shows the fraction of cells in a
+        commitment state at every timepoint. Click a germ layer or lineage to
+        restrict the view to that branch and watch it expand across development.
+      </p>
+    </div>
+
+    <div class="card panel">
+      <FateSankey client:load />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head {
+    margin-bottom: 2rem;
+  }
+  .panel {
+    padding: clamp(1rem, 0.5rem + 2vw, 2rem);
+  }
+</style>

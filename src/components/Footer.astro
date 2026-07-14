@@ -1,0 +1,69 @@
+---
+import { SITE, NAV } from '../config/site';
+import { withBase } from '../lib/base';
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__mark">{SITE.title}</span>
+      <p class="footer__full">{SITE.full}</p>
+    </div>
+    <nav aria-label="Footer" class="footer__nav">
+      {NAV.map((i) => <a href={withBase(i.href)}>{i.label}</a>)}
+    </nav>
+    <div class="footer__meta">
+      <a href={SITE.githubUrl}>GitHub</a>
+      <a href={`mailto:${SITE.contactEmail}`}>Contact</a>
+      <span>© {new Date().getFullYear()} Weissman Lab</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--rule);
+    background: var(--paper-2);
+    padding-block: 2.5rem;
+    margin-top: 4rem;
+  }
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .footer__mark {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+  }
+  .footer__full {
+    margin: 0.2rem 0 0;
+    color: var(--ink-3);
+    font-size: var(--fs-small);
+    max-width: 30ch;
+  }
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .footer__nav a {
+    color: var(--ink-2);
+    font-size: var(--fs-small);
+  }
+  .footer__nav a:hover {
+    color: var(--accent);
+  }
+  .footer__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: var(--ink-3);
+    font-size: var(--fs-small);
+  }
+  .footer__meta a {
+    color: var(--ink-2);
+  }
+</style>

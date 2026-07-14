@@ -1,0 +1,112 @@
+---
+import { NAV, SITE } from '../config/site';
+import { withBase } from '../lib/base';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+function isActive(href: string) {
+  const target = (base + (href === '/' ? '' : href)) || '/';
+  return target === path || (href !== '/' && path.startsWith(target));
+}
+---
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href={withBase('/')}>
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span class="nav__mark">{SITE.title}</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__list">
+        {
+          NAV.map((item) => (
+            <li>
+              <a
+                href={withBase(item.href)}
+                class:list={['nav__link', { 'is-active': isActive(item.href) }]}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: saturate(1.2) blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 64px;
+  }
+  .nav__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+  }
+  .nav__brand:hover {
+    color: var(--ink);
+  }
+  .nav__dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-tint);
+  }
+  .nav__list {
+    display: flex;
+    gap: clamp(0.6rem, 0.2rem + 1.4vw, 1.9rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav__link {
+    position: relative;
+    color: var(--ink-2);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    padding: 0.35rem 0;
+  }
+  .nav__link:hover {
+    color: var(--ink);
+  }
+  .nav__link.is-active {
+    color: var(--ink);
+  }
+  .nav__link.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+  @media (max-width: 560px) {
+    .nav__mark {
+      display: none;
+    }
+    .nav__inner {
+      height: 56px;
+    }
+  }
+</style>

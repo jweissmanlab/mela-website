@@ -1,0 +1,137 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+const { src, title } = Astro.props;
+---
+
+<div class="embed" data-src={src}>
+  <div class="embed__bar">
+    <span class="embed__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="embed__url">{src}</span>
+    <a class="embed__open" href={src} target="_blank" rel="noopener noreferrer">
+      Open in new tab ↗
+    </a>
+  </div>
+
+  <div class="embed__stage">
+    <iframe
+      class="embed__frame"
+      src={src}
+      title={title}
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    ></iframe>
+
+    <!-- Fallback: shown if the frame cannot load (e.g. off-network / framing blocked) -->
+    <div class="embed__fallback" hidden>
+      <div class="embed__fallback-inner">
+        <h3>The exploration tool isn't loading here</h3>
+        <p>
+          The tool is currently hosted on the institute network. If you're
+          off-campus or it can't be framed, open it directly in a new tab.
+        </p>
+        <a class="btn btn-primary" href={src} target="_blank" rel="noopener noreferrer">
+          Open the tool ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Reveal the fallback if the iframe hasn't reported a load shortly after mount.
+  document.querySelectorAll<HTMLElement>('.embed').forEach((el) => {
+    const frame = el.querySelector<HTMLIFrameElement>('.embed__frame');
+    const fallback = el.querySelector<HTMLElement>('.embed__fallback');
+    if (!frame || !fallback) return;
+    let loaded = false;
+    frame.addEventListener('load', () => {
+      loaded = true;
+      fallback.hidden = true;
+    });
+    frame.addEventListener('error', () => {
+      fallback.hidden = false;
+    });
+    // If nothing loaded within the timeout, assume unreachable.
+    window.setTimeout(() => {
+      if (!loaded) fallback.hidden = false;
+    }, 6000);
+  });
+</script>
+
+<style>
+  .embed {
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background: #fff;
+  }
+  .embed__bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+  }
+  .embed__dots {
+    display: inline-flex;
+    gap: 5px;
+  }
+  .embed__dots i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--rule-strong);
+  }
+  .embed__url {
+    font-family: var(--mono);
+    font-size: var(--fs-tiny);
+    color: var(--ink-3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+  .embed__open {
+    font-size: var(--fs-tiny);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .embed__stage {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    min-height: 420px;
+  }
+  .embed__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .embed__fallback {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    text-align: center;
+    background:
+      radial-gradient(120% 100% at 50% 0%, var(--accent-tint), transparent 60%),
+      var(--paper);
+  }
+  .embed__fallback[hidden] {
+    display: none;
+  }
+  .embed__fallback-inner {
+    max-width: 44ch;
+  }
+  .embed__fallback-inner p {
+    color: var(--ink-2);
+    margin-bottom: 1.25rem;
+  }
+</style>

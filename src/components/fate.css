@@ -1,0 +1,184 @@
+.fs {
+  position: relative;
+}
+
+.fs__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.fs__crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  font-size: var(--fs-small);
+}
+.fs__crumb {
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+  border-radius: var(--r-sm);
+  font: inherit;
+}
+.fs__crumb:hover {
+  background: var(--accent-tint);
+}
+.fs__crumb.is-current {
+  color: var(--ink);
+  font-weight: 600;
+  cursor: default;
+}
+.fs__sep {
+  color: var(--ink-3);
+  margin: 0 0.1rem;
+}
+.fs__reset {
+  border: 1px solid var(--rule-strong);
+  background: #fff;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: var(--fs-small);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.fs__reset:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.fs__scroll {
+  overflow-x: auto;
+}
+.fs__svg {
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fs__scene {
+    animation: fs-fade 0.4s var(--ease);
+  }
+  @keyframes fs-fade {
+    from {
+      opacity: 0;
+    }
+  }
+}
+
+.fs__stage {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  fill: var(--ink-3);
+}
+.fs__ribbon {
+  transition: fill-opacity 0.15s var(--ease);
+}
+.fs__ribbon:hover {
+  fill-opacity: 0.75;
+}
+.fs__bars rect {
+  transition: filter 0.15s var(--ease);
+}
+.fs__bars rect.is-clickable {
+  cursor: pointer;
+}
+.fs__bars rect.is-clickable:hover {
+  filter: brightness(0.88);
+}
+
+/* legend */
+.fs__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.fs__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: var(--fs-small);
+  color: var(--ink-2);
+  cursor: pointer;
+  padding: 0.15rem 0.3rem;
+  border-radius: var(--r-sm);
+}
+.fs__legend-item:hover:not(:disabled) {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+.fs__legend-item:disabled {
+  cursor: default;
+  color: var(--ink-3);
+}
+.fs__legend-item.is-current {
+  font-weight: 600;
+  color: var(--ink);
+}
+.fs__swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.fs__tip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 12px));
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 0.7rem;
+  border-radius: var(--r-sm);
+  font-size: var(--fs-tiny);
+  line-height: 1.35;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  z-index: 5;
+}
+.fs__tip span {
+  display: block;
+  color: #c9c9c9;
+  font-size: var(--fs-tiny);
+  margin-top: 0.1rem;
+}
+.fs__tip b {
+  display: block;
+  font-weight: 700;
+  font-size: var(--fs-small);
+  margin-top: 0.2rem;
+}
+.fs__tip i {
+  display: block;
+  font-style: normal;
+  color: #b9d9d7;
+  margin-top: 0.15rem;
+}
+
+.fs__hint {
+  margin-top: 1rem;
+  font-size: var(--fs-small);
+  color: var(--ink-3);
+}
+.fs-loading,
+.fs-error {
+  color: var(--ink-3);
+  padding: 2rem 0;
+}

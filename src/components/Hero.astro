@@ -1,0 +1,117 @@
+---
+import { SITE } from '../config/site';
+import { withBase } from '../lib/base';
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy reveal">
+      <p class="eyebrow">Mouse Embryonic Lineage &amp; Transcriptome</p>
+      <h1 class="hero__title">{SITE.tagline}</h1>
+      <p class="lead">
+        MELT reconstructs lineage trees across more than 1.5 million cells from
+        16 mouse embryos, staged at half-day intervals from E7.5 to E10.0, and
+        pairs them with deep transcriptional profiling to chart how cell fate is
+        decided during gastrulation and early organogenesis.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href={withBase('/explore')}>Explore the data</a>
+        <a class="btn btn-ghost" href={withBase('/download')}>Download →</a>
+      </div>
+    </div>
+
+    <div class="hero__art reveal" aria-hidden="true">
+      <svg viewBox="0 0 420 360" role="img" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="timeGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#c58b4e" />
+            <stop offset="0.5" stop-color="#6aa9a6" />
+            <stop offset="1" stop-color="#0e7c7b" />
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#0e7c7b" stop-opacity="0.18" />
+            <stop offset="1" stop-color="#0e7c7b" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="420" height="360" fill="url(#glow)" />
+        <!-- branching lineage tree, root at bottom -->
+        <g fill="none" stroke="url(#timeGrad)" stroke-width="2.2" stroke-linecap="round" opacity="0.9">
+          <path d="M210 340 L210 280" />
+          <path d="M210 280 C210 240 130 240 120 200" />
+          <path d="M210 280 C210 240 300 240 300 200" />
+          <path d="M120 200 C112 168 70 170 64 130" />
+          <path d="M120 200 C128 168 172 170 176 130" />
+          <path d="M300 200 C296 168 250 170 246 130" />
+          <path d="M300 200 C306 168 352 170 356 130" />
+          <path d="M64 130 C60 100 42 100 40 70" />
+          <path d="M64 130 C70 100 92 100 96 70" />
+          <path d="M176 130 C172 100 152 100 150 70" />
+          <path d="M176 130 C182 100 202 100 206 70" />
+          <path d="M246 130 C242 100 224 100 222 70" />
+          <path d="M246 130 C252 100 272 100 276 70" />
+          <path d="M356 130 C352 100 336 100 334 70" />
+          <path d="M356 130 C362 100 382 100 384 70" />
+        </g>
+        <!-- leaf cells -->
+        <g>
+          <circle cx="40" cy="66" r="5" fill="#c58b4e" />
+          <circle cx="96" cy="66" r="5" fill="#6aa9a6" />
+          <circle cx="150" cy="66" r="5" fill="#0e7c7b" />
+          <circle cx="206" cy="66" r="5" fill="#46688a" />
+          <circle cx="222" cy="66" r="5" fill="#a85751" />
+          <circle cx="276" cy="66" r="5" fill="#5c7a52" />
+          <circle cx="334" cy="66" r="5" fill="#9a6a8c" />
+          <circle cx="384" cy="66" r="5" fill="#8a7f6d" />
+        </g>
+        <circle cx="210" cy="340" r="6" fill="#1a1a1a" />
+        <!-- time axis -->
+        <g font-family="var(--sans)" font-size="10" fill="#7c7a73">
+          <text x="392" y="344" text-anchor="end">E7.5</text>
+          <text x="392" y="62" text-anchor="end">E10.0</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: clamp(3rem, 2rem + 6vw, 7rem) clamp(2rem, 1rem + 4vw, 4rem);
+  }
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1.5rem, 1rem + 3vw, 4rem);
+    align-items: center;
+  }
+  .hero__title {
+    font-size: var(--fs-display);
+    margin: 0 0 1rem;
+  }
+  .hero__copy .lead {
+    max-width: 46ch;
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+  .hero__art svg {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+  }
+  .hero__art .reveal {
+    animation-delay: 0.1s;
+  }
+  @media (max-width: 820px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+    }
+    .hero__art {
+      order: -1;
+      max-width: 340px;
+    }
+  }
+</style>

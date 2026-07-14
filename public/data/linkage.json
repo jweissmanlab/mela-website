@@ -1,0 +1,2035 @@
+{
+ "title": "Lineage linkage between cell types",
+ "axes": {
+  "rows": [
+   "Epiblast",
+   "Primitive streak",
+   "Nascent mesoderm",
+   "Paraxial mesoderm",
+   "Somites",
+   "Cardiac mesoderm",
+   "Endothelium",
+   "Definitive endoderm",
+   "Gut tube",
+   "Neural plate",
+   "Neural crest",
+   "Surface ectoderm",
+   "Notochord",
+   "Blood progenitors"
+  ],
+  "cols": [
+   "Epiblast",
+   "Primitive streak",
+   "Nascent mesoderm",
+   "Paraxial mesoderm",
+   "Somites",
+   "Cardiac mesoderm",
+   "Endothelium",
+   "Definitive endoderm",
+   "Gut tube",
+   "Neural plate",
+   "Neural crest",
+   "Surface ectoderm",
+   "Notochord",
+   "Blood progenitors"
+  ]
+ },
+ "matrix": [
+  [
+   1,
+   0.91,
+   0.81,
+   0.898,
+   0.608,
+   0.532,
+   0.281,
+   0.533,
+   0.477,
+   0.29,
+   0.264,
+   0.15,
+   0.089,
+   0.069
+  ],
+  [
+   0.497,
+   1,
+   0.69,
+   0.452,
+   0.792,
+   0.4,
+   0.514,
+   0.408,
+   0.556,
+   0.342,
+   0.357,
+   0.154,
+   0.26,
+   0.091
+  ],
+  [
+   0.621,
+   0.666,
+   1,
+   0.958,
+   0.538,
+   0.396,
+   0.484,
+   0.789,
+   0.342,
+   0.4,
+   0.311,
+   0.334,
+   0.205,
+   0.136
+  ],
+  [
+   0.442,
+   0.537,
+   1,
+   1,
+   1,
+   0.93,
+   0.959,
+   0.74,
+   0.55,
+   0.624,
+   0.463,
+   0.424,
+   0.257,
+   0.138
+  ],
+  [
+   0.856,
+   0.455,
+   0.592,
+   0.998,
+   1,
+   0.76,
+   0.498,
+   0.697,
+   0.336,
+   0.729,
+   0.626,
+   0.503,
+   0.446,
+   0.387
+  ],
+  [
+   0.348,
+   0.699,
+   0.606,
+   0.753,
+   0.623,
+   1,
+   0.656,
+   0.851,
+   0.959,
+   0.699,
+   0.456,
+   0.5,
+   0.498,
+   0.36
+  ],
+  [
+   0.59,
+   0.744,
+   0.607,
+   0.633,
+   0.429,
+   0.701,
+   1,
+   0.931,
+   0.997,
+   0.744,
+   0.476,
+   0.592,
+   0.669,
+   0.364
+  ],
+  [
+   0.456,
+   0.281,
+   0.401,
+   0.379,
+   0.843,
+   0.496,
+   0.981,
+   1,
+   1,
+   1,
+   0.563,
+   0.805,
+   0.55,
+   0.327
+  ],
+  [
+   0.367,
+   0.294,
+   0.357,
+   0.539,
+   0.805,
+   0.67,
+   0.992,
+   0.472,
+   1,
+   0.844,
+   0.854,
+   0.927,
+   0.586,
+   0.518
+  ],
+  [
+   0.362,
+   0.357,
+   0.431,
+   0.534,
+   0.782,
+   0.777,
+   0.388,
+   0.91,
+   1,
+   1,
+   0.532,
+   0.817,
+   0.812,
+   0.473
+  ],
+  [
+   0.217,
+   0.294,
+   0.395,
+   0.4,
+   0.525,
+   0.635,
+   0.678,
+   0.404,
+   0.423,
+   0.884,
+   1,
+   0.898,
+   0.959,
+   0.614
+  ],
+  [
+   0.216,
+   0.34,
+   0.349,
+   0.313,
+   0.323,
+   0.488,
+   0.597,
+   0.456,
+   0.602,
+   0.812,
+   0.751,
+   1,
+   0.851,
+   0.699
+  ],
+  [
+   0.111,
+   0.163,
+   0.275,
+   0.358,
+   0.292,
+   0.469,
+   0.354,
+   0.769,
+   0.668,
+   0.593,
+   0.515,
+   0.814,
+   1,
+   1
+  ],
+  [
+   0.084,
+   0.115,
+   0.206,
+   0.262,
+   0.323,
+   0.341,
+   0.28,
+   0.464,
+   0.516,
+   0.653,
+   0.594,
+   0.894,
+   1,
+   1
+  ]
+ ],
+ "meta": {
+  "Epiblast|Epiblast": {
+   "value": 1,
+   "nCells": 6091,
+   "description": "Self-linkage baseline for Epiblast.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 107
+  },
+  "Epiblast|Primitive streak": {
+   "value": 0.91,
+   "nCells": 1913,
+   "description": "Lineage coupling between Epiblast and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 34
+  },
+  "Epiblast|Nascent mesoderm": {
+   "value": 0.81,
+   "nCells": 8682,
+   "description": "Lineage coupling between Epiblast and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 28
+  },
+  "Epiblast|Paraxial mesoderm": {
+   "value": 0.898,
+   "nCells": 7508,
+   "description": "Lineage coupling between Epiblast and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 26
+  },
+  "Epiblast|Somites": {
+   "value": 0.608,
+   "nCells": 6929,
+   "description": "Lineage coupling between Epiblast and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 3
+  },
+  "Epiblast|Cardiac mesoderm": {
+   "value": 0.532,
+   "nCells": 8406,
+   "description": "Lineage coupling between Epiblast and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 40
+  },
+  "Epiblast|Endothelium": {
+   "value": 0.281,
+   "nCells": 2816,
+   "description": "Lineage coupling between Epiblast and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 8
+  },
+  "Epiblast|Definitive endoderm": {
+   "value": 0.533,
+   "nCells": 5397,
+   "description": "Lineage coupling between Epiblast and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 14
+  },
+  "Epiblast|Gut tube": {
+   "value": 0.477,
+   "nCells": 4980,
+   "description": "Lineage coupling between Epiblast and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 21
+  },
+  "Epiblast|Neural plate": {
+   "value": 0.29,
+   "nCells": 567,
+   "description": "Lineage coupling between Epiblast and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 21
+  },
+  "Epiblast|Neural crest": {
+   "value": 0.264,
+   "nCells": 2603,
+   "description": "Lineage coupling between Epiblast and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 8
+  },
+  "Epiblast|Surface ectoderm": {
+   "value": 0.15,
+   "nCells": 7438,
+   "description": "Lineage coupling between Epiblast and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 10
+  },
+  "Epiblast|Notochord": {
+   "value": 0.089,
+   "nCells": 2985,
+   "description": "Lineage coupling between Epiblast and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 1
+  },
+  "Epiblast|Blood progenitors": {
+   "value": 0.069,
+   "nCells": 6872,
+   "description": "Lineage coupling between Epiblast and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 8
+  },
+  "Primitive streak|Epiblast": {
+   "value": 0.497,
+   "nCells": 9449,
+   "description": "Lineage coupling between Primitive streak and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 59
+  },
+  "Primitive streak|Primitive streak": {
+   "value": 1,
+   "nCells": 1546,
+   "description": "Self-linkage baseline for Primitive streak.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 7
+  },
+  "Primitive streak|Nascent mesoderm": {
+   "value": 0.69,
+   "nCells": 4921,
+   "description": "Lineage coupling between Primitive streak and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 78
+  },
+  "Primitive streak|Paraxial mesoderm": {
+   "value": 0.452,
+   "nCells": 7252,
+   "description": "Lineage coupling between Primitive streak and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 17
+  },
+  "Primitive streak|Somites": {
+   "value": 0.792,
+   "nCells": 1960,
+   "description": "Lineage coupling between Primitive streak and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 82
+  },
+  "Primitive streak|Cardiac mesoderm": {
+   "value": 0.4,
+   "nCells": 9957,
+   "description": "Lineage coupling between Primitive streak and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 46
+  },
+  "Primitive streak|Endothelium": {
+   "value": 0.514,
+   "nCells": 5869,
+   "description": "Lineage coupling between Primitive streak and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 39
+  },
+  "Primitive streak|Definitive endoderm": {
+   "value": 0.408,
+   "nCells": 7348,
+   "description": "Lineage coupling between Primitive streak and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 24
+  },
+  "Primitive streak|Gut tube": {
+   "value": 0.556,
+   "nCells": 7012,
+   "description": "Lineage coupling between Primitive streak and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 62
+  },
+  "Primitive streak|Neural plate": {
+   "value": 0.342,
+   "nCells": 5543,
+   "description": "Lineage coupling between Primitive streak and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 6
+  },
+  "Primitive streak|Neural crest": {
+   "value": 0.357,
+   "nCells": 3270,
+   "description": "Lineage coupling between Primitive streak and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 41
+  },
+  "Primitive streak|Surface ectoderm": {
+   "value": 0.154,
+   "nCells": 4859,
+   "description": "Lineage coupling between Primitive streak and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 3
+  },
+  "Primitive streak|Notochord": {
+   "value": 0.26,
+   "nCells": 1948,
+   "description": "Lineage coupling between Primitive streak and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 23
+  },
+  "Primitive streak|Blood progenitors": {
+   "value": 0.091,
+   "nCells": 4246,
+   "description": "Lineage coupling between Primitive streak and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 8
+  },
+  "Nascent mesoderm|Epiblast": {
+   "value": 0.621,
+   "nCells": 2228,
+   "description": "Lineage coupling between Nascent mesoderm and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 69
+  },
+  "Nascent mesoderm|Primitive streak": {
+   "value": 0.666,
+   "nCells": 7966,
+   "description": "Lineage coupling between Nascent mesoderm and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 14
+  },
+  "Nascent mesoderm|Nascent mesoderm": {
+   "value": 1,
+   "nCells": 8664,
+   "description": "Self-linkage baseline for Nascent mesoderm.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 6
+  },
+  "Nascent mesoderm|Paraxial mesoderm": {
+   "value": 0.958,
+   "nCells": 6426,
+   "description": "Lineage coupling between Nascent mesoderm and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 109
+  },
+  "Nascent mesoderm|Somites": {
+   "value": 0.538,
+   "nCells": 6119,
+   "description": "Lineage coupling between Nascent mesoderm and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 15
+  },
+  "Nascent mesoderm|Cardiac mesoderm": {
+   "value": 0.396,
+   "nCells": 7114,
+   "description": "Lineage coupling between Nascent mesoderm and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 16
+  },
+  "Nascent mesoderm|Endothelium": {
+   "value": 0.484,
+   "nCells": 3499,
+   "description": "Lineage coupling between Nascent mesoderm and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 15
+  },
+  "Nascent mesoderm|Definitive endoderm": {
+   "value": 0.789,
+   "nCells": 5809,
+   "description": "Lineage coupling between Nascent mesoderm and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 19
+  },
+  "Nascent mesoderm|Gut tube": {
+   "value": 0.342,
+   "nCells": 5697,
+   "description": "Lineage coupling between Nascent mesoderm and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 18
+  },
+  "Nascent mesoderm|Neural plate": {
+   "value": 0.4,
+   "nCells": 4300,
+   "description": "Lineage coupling between Nascent mesoderm and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 21
+  },
+  "Nascent mesoderm|Neural crest": {
+   "value": 0.311,
+   "nCells": 8977,
+   "description": "Lineage coupling between Nascent mesoderm and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 20
+  },
+  "Nascent mesoderm|Surface ectoderm": {
+   "value": 0.334,
+   "nCells": 5554,
+   "description": "Lineage coupling between Nascent mesoderm and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 11
+  },
+  "Nascent mesoderm|Notochord": {
+   "value": 0.205,
+   "nCells": 3128,
+   "description": "Lineage coupling between Nascent mesoderm and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 17
+  },
+  "Nascent mesoderm|Blood progenitors": {
+   "value": 0.136,
+   "nCells": 1859,
+   "description": "Lineage coupling between Nascent mesoderm and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 6
+  },
+  "Paraxial mesoderm|Epiblast": {
+   "value": 0.442,
+   "nCells": 3275,
+   "description": "Lineage coupling between Paraxial mesoderm and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 33
+  },
+  "Paraxial mesoderm|Primitive streak": {
+   "value": 0.537,
+   "nCells": 4919,
+   "description": "Lineage coupling between Paraxial mesoderm and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 49
+  },
+  "Paraxial mesoderm|Nascent mesoderm": {
+   "value": 1,
+   "nCells": 8155,
+   "description": "Lineage coupling between Paraxial mesoderm and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 23
+  },
+  "Paraxial mesoderm|Paraxial mesoderm": {
+   "value": 1,
+   "nCells": 8703,
+   "description": "Self-linkage baseline for Paraxial mesoderm.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 106
+  },
+  "Paraxial mesoderm|Somites": {
+   "value": 1,
+   "nCells": 4611,
+   "description": "Lineage coupling between Paraxial mesoderm and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 79
+  },
+  "Paraxial mesoderm|Cardiac mesoderm": {
+   "value": 0.93,
+   "nCells": 2242,
+   "description": "Lineage coupling between Paraxial mesoderm and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 66
+  },
+  "Paraxial mesoderm|Endothelium": {
+   "value": 0.959,
+   "nCells": 5022,
+   "description": "Lineage coupling between Paraxial mesoderm and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 102
+  },
+  "Paraxial mesoderm|Definitive endoderm": {
+   "value": 0.74,
+   "nCells": 725,
+   "description": "Lineage coupling between Paraxial mesoderm and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 19
+  },
+  "Paraxial mesoderm|Gut tube": {
+   "value": 0.55,
+   "nCells": 6831,
+   "description": "Lineage coupling between Paraxial mesoderm and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 68
+  },
+  "Paraxial mesoderm|Neural plate": {
+   "value": 0.624,
+   "nCells": 6390,
+   "description": "Lineage coupling between Paraxial mesoderm and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 67
+  },
+  "Paraxial mesoderm|Neural crest": {
+   "value": 0.463,
+   "nCells": 3641,
+   "description": "Lineage coupling between Paraxial mesoderm and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 51
+  },
+  "Paraxial mesoderm|Surface ectoderm": {
+   "value": 0.424,
+   "nCells": 3623,
+   "description": "Lineage coupling between Paraxial mesoderm and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 34
+  },
+  "Paraxial mesoderm|Notochord": {
+   "value": 0.257,
+   "nCells": 8478,
+   "description": "Lineage coupling between Paraxial mesoderm and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 13
+  },
+  "Paraxial mesoderm|Blood progenitors": {
+   "value": 0.138,
+   "nCells": 1038,
+   "description": "Lineage coupling between Paraxial mesoderm and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 13
+  },
+  "Somites|Epiblast": {
+   "value": 0.856,
+   "nCells": 8819,
+   "description": "Lineage coupling between Somites and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 77
+  },
+  "Somites|Primitive streak": {
+   "value": 0.455,
+   "nCells": 2876,
+   "description": "Lineage coupling between Somites and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 5
+  },
+  "Somites|Nascent mesoderm": {
+   "value": 0.592,
+   "nCells": 4522,
+   "description": "Lineage coupling between Somites and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 54
+  },
+  "Somites|Paraxial mesoderm": {
+   "value": 0.998,
+   "nCells": 7891,
+   "description": "Lineage coupling between Somites and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 85
+  },
+  "Somites|Somites": {
+   "value": 1,
+   "nCells": 5274,
+   "description": "Self-linkage baseline for Somites.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 61
+  },
+  "Somites|Cardiac mesoderm": {
+   "value": 0.76,
+   "nCells": 4366,
+   "description": "Lineage coupling between Somites and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 32
+  },
+  "Somites|Endothelium": {
+   "value": 0.498,
+   "nCells": 5145,
+   "description": "Lineage coupling between Somites and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 34
+  },
+  "Somites|Definitive endoderm": {
+   "value": 0.697,
+   "nCells": 6544,
+   "description": "Lineage coupling between Somites and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 15
+  },
+  "Somites|Gut tube": {
+   "value": 0.336,
+   "nCells": 1652,
+   "description": "Lineage coupling between Somites and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 4
+  },
+  "Somites|Neural plate": {
+   "value": 0.729,
+   "nCells": 4418,
+   "description": "Lineage coupling between Somites and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 12
+  },
+  "Somites|Neural crest": {
+   "value": 0.626,
+   "nCells": 756,
+   "description": "Lineage coupling between Somites and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 20
+  },
+  "Somites|Surface ectoderm": {
+   "value": 0.503,
+   "nCells": 5728,
+   "description": "Lineage coupling between Somites and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 61
+  },
+  "Somites|Notochord": {
+   "value": 0.446,
+   "nCells": 6680,
+   "description": "Lineage coupling between Somites and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 32
+  },
+  "Somites|Blood progenitors": {
+   "value": 0.387,
+   "nCells": 5365,
+   "description": "Lineage coupling between Somites and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 6
+  },
+  "Cardiac mesoderm|Epiblast": {
+   "value": 0.348,
+   "nCells": 784,
+   "description": "Lineage coupling between Cardiac mesoderm and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 30
+  },
+  "Cardiac mesoderm|Primitive streak": {
+   "value": 0.699,
+   "nCells": 5698,
+   "description": "Lineage coupling between Cardiac mesoderm and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 5
+  },
+  "Cardiac mesoderm|Nascent mesoderm": {
+   "value": 0.606,
+   "nCells": 3511,
+   "description": "Lineage coupling between Cardiac mesoderm and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 64
+  },
+  "Cardiac mesoderm|Paraxial mesoderm": {
+   "value": 0.753,
+   "nCells": 2209,
+   "description": "Lineage coupling between Cardiac mesoderm and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 90
+  },
+  "Cardiac mesoderm|Somites": {
+   "value": 0.623,
+   "nCells": 5280,
+   "description": "Lineage coupling between Cardiac mesoderm and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 73
+  },
+  "Cardiac mesoderm|Cardiac mesoderm": {
+   "value": 1,
+   "nCells": 6913,
+   "description": "Self-linkage baseline for Cardiac mesoderm.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 102
+  },
+  "Cardiac mesoderm|Endothelium": {
+   "value": 0.656,
+   "nCells": 5041,
+   "description": "Lineage coupling between Cardiac mesoderm and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 47
+  },
+  "Cardiac mesoderm|Definitive endoderm": {
+   "value": 0.851,
+   "nCells": 5632,
+   "description": "Lineage coupling between Cardiac mesoderm and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 103
+  },
+  "Cardiac mesoderm|Gut tube": {
+   "value": 0.959,
+   "nCells": 7712,
+   "description": "Lineage coupling between Cardiac mesoderm and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 77
+  },
+  "Cardiac mesoderm|Neural plate": {
+   "value": 0.699,
+   "nCells": 8674,
+   "description": "Lineage coupling between Cardiac mesoderm and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 77
+  },
+  "Cardiac mesoderm|Neural crest": {
+   "value": 0.456,
+   "nCells": 8823,
+   "description": "Lineage coupling between Cardiac mesoderm and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 21
+  },
+  "Cardiac mesoderm|Surface ectoderm": {
+   "value": 0.5,
+   "nCells": 8400,
+   "description": "Lineage coupling between Cardiac mesoderm and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 55
+  },
+  "Cardiac mesoderm|Notochord": {
+   "value": 0.498,
+   "nCells": 1678,
+   "description": "Lineage coupling between Cardiac mesoderm and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 60
+  },
+  "Cardiac mesoderm|Blood progenitors": {
+   "value": 0.36,
+   "nCells": 2893,
+   "description": "Lineage coupling between Cardiac mesoderm and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 35
+  },
+  "Endothelium|Epiblast": {
+   "value": 0.59,
+   "nCells": 7205,
+   "description": "Lineage coupling between Endothelium and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 63
+  },
+  "Endothelium|Primitive streak": {
+   "value": 0.744,
+   "nCells": 5538,
+   "description": "Lineage coupling between Endothelium and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 10
+  },
+  "Endothelium|Nascent mesoderm": {
+   "value": 0.607,
+   "nCells": 8954,
+   "description": "Lineage coupling between Endothelium and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 34
+  },
+  "Endothelium|Paraxial mesoderm": {
+   "value": 0.633,
+   "nCells": 6235,
+   "description": "Lineage coupling between Endothelium and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 43
+  },
+  "Endothelium|Somites": {
+   "value": 0.429,
+   "nCells": 1842,
+   "description": "Lineage coupling between Endothelium and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 8
+  },
+  "Endothelium|Cardiac mesoderm": {
+   "value": 0.701,
+   "nCells": 8316,
+   "description": "Lineage coupling between Endothelium and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 61
+  },
+  "Endothelium|Endothelium": {
+   "value": 1,
+   "nCells": 1031,
+   "description": "Self-linkage baseline for Endothelium.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 37
+  },
+  "Endothelium|Definitive endoderm": {
+   "value": 0.931,
+   "nCells": 2843,
+   "description": "Lineage coupling between Endothelium and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 75
+  },
+  "Endothelium|Gut tube": {
+   "value": 0.997,
+   "nCells": 8904,
+   "description": "Lineage coupling between Endothelium and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 17
+  },
+  "Endothelium|Neural plate": {
+   "value": 0.744,
+   "nCells": 2550,
+   "description": "Lineage coupling between Endothelium and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 29
+  },
+  "Endothelium|Neural crest": {
+   "value": 0.476,
+   "nCells": 7260,
+   "description": "Lineage coupling between Endothelium and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 30
+  },
+  "Endothelium|Surface ectoderm": {
+   "value": 0.592,
+   "nCells": 1269,
+   "description": "Lineage coupling between Endothelium and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 52
+  },
+  "Endothelium|Notochord": {
+   "value": 0.669,
+   "nCells": 1343,
+   "description": "Lineage coupling between Endothelium and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 6
+  },
+  "Endothelium|Blood progenitors": {
+   "value": 0.364,
+   "nCells": 2554,
+   "description": "Lineage coupling between Endothelium and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 45
+  },
+  "Definitive endoderm|Epiblast": {
+   "value": 0.456,
+   "nCells": 8432,
+   "description": "Lineage coupling between Definitive endoderm and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 38
+  },
+  "Definitive endoderm|Primitive streak": {
+   "value": 0.281,
+   "nCells": 7400,
+   "description": "Lineage coupling between Definitive endoderm and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 14
+  },
+  "Definitive endoderm|Nascent mesoderm": {
+   "value": 0.401,
+   "nCells": 7898,
+   "description": "Lineage coupling between Definitive endoderm and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 9
+  },
+  "Definitive endoderm|Paraxial mesoderm": {
+   "value": 0.379,
+   "nCells": 7771,
+   "description": "Lineage coupling between Definitive endoderm and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 41
+  },
+  "Definitive endoderm|Somites": {
+   "value": 0.843,
+   "nCells": 5037,
+   "description": "Lineage coupling between Definitive endoderm and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 22
+  },
+  "Definitive endoderm|Cardiac mesoderm": {
+   "value": 0.496,
+   "nCells": 5611,
+   "description": "Lineage coupling between Definitive endoderm and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 15
+  },
+  "Definitive endoderm|Endothelium": {
+   "value": 0.981,
+   "nCells": 2565,
+   "description": "Lineage coupling between Definitive endoderm and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 83
+  },
+  "Definitive endoderm|Definitive endoderm": {
+   "value": 1,
+   "nCells": 6107,
+   "description": "Self-linkage baseline for Definitive endoderm.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 30
+  },
+  "Definitive endoderm|Gut tube": {
+   "value": 1,
+   "nCells": 5313,
+   "description": "Lineage coupling between Definitive endoderm and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 11
+  },
+  "Definitive endoderm|Neural plate": {
+   "value": 1,
+   "nCells": 5888,
+   "description": "Lineage coupling between Definitive endoderm and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 11
+  },
+  "Definitive endoderm|Neural crest": {
+   "value": 0.563,
+   "nCells": 7177,
+   "description": "Lineage coupling between Definitive endoderm and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 20
+  },
+  "Definitive endoderm|Surface ectoderm": {
+   "value": 0.805,
+   "nCells": 4667,
+   "description": "Lineage coupling between Definitive endoderm and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 66
+  },
+  "Definitive endoderm|Notochord": {
+   "value": 0.55,
+   "nCells": 2046,
+   "description": "Lineage coupling between Definitive endoderm and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 9
+  },
+  "Definitive endoderm|Blood progenitors": {
+   "value": 0.327,
+   "nCells": 9951,
+   "description": "Lineage coupling between Definitive endoderm and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 20
+  },
+  "Gut tube|Epiblast": {
+   "value": 0.367,
+   "nCells": 6272,
+   "description": "Lineage coupling between Gut tube and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 32
+  },
+  "Gut tube|Primitive streak": {
+   "value": 0.294,
+   "nCells": 9795,
+   "description": "Lineage coupling between Gut tube and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 14
+  },
+  "Gut tube|Nascent mesoderm": {
+   "value": 0.357,
+   "nCells": 5277,
+   "description": "Lineage coupling between Gut tube and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 21
+  },
+  "Gut tube|Paraxial mesoderm": {
+   "value": 0.539,
+   "nCells": 2671,
+   "description": "Lineage coupling between Gut tube and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 5
+  },
+  "Gut tube|Somites": {
+   "value": 0.805,
+   "nCells": 3763,
+   "description": "Lineage coupling between Gut tube and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 28
+  },
+  "Gut tube|Cardiac mesoderm": {
+   "value": 0.67,
+   "nCells": 602,
+   "description": "Lineage coupling between Gut tube and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 9
+  },
+  "Gut tube|Endothelium": {
+   "value": 0.992,
+   "nCells": 7679,
+   "description": "Lineage coupling between Gut tube and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 101
+  },
+  "Gut tube|Definitive endoderm": {
+   "value": 0.472,
+   "nCells": 5949,
+   "description": "Lineage coupling between Gut tube and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 30
+  },
+  "Gut tube|Gut tube": {
+   "value": 1,
+   "nCells": 5222,
+   "description": "Self-linkage baseline for Gut tube.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 59
+  },
+  "Gut tube|Neural plate": {
+   "value": 0.844,
+   "nCells": 360,
+   "description": "Lineage coupling between Gut tube and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 5
+  },
+  "Gut tube|Neural crest": {
+   "value": 0.854,
+   "nCells": 1996,
+   "description": "Lineage coupling between Gut tube and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 79
+  },
+  "Gut tube|Surface ectoderm": {
+   "value": 0.927,
+   "nCells": 2934,
+   "description": "Lineage coupling between Gut tube and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 105
+  },
+  "Gut tube|Notochord": {
+   "value": 0.586,
+   "nCells": 647,
+   "description": "Lineage coupling between Gut tube and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 38
+  },
+  "Gut tube|Blood progenitors": {
+   "value": 0.518,
+   "nCells": 4790,
+   "description": "Lineage coupling between Gut tube and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 10
+  },
+  "Neural plate|Epiblast": {
+   "value": 0.362,
+   "nCells": 6032,
+   "description": "Lineage coupling between Neural plate and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 38
+  },
+  "Neural plate|Primitive streak": {
+   "value": 0.357,
+   "nCells": 281,
+   "description": "Lineage coupling between Neural plate and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 4
+  },
+  "Neural plate|Nascent mesoderm": {
+   "value": 0.431,
+   "nCells": 4971,
+   "description": "Lineage coupling between Neural plate and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 31
+  },
+  "Neural plate|Paraxial mesoderm": {
+   "value": 0.534,
+   "nCells": 8549,
+   "description": "Lineage coupling between Neural plate and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 66
+  },
+  "Neural plate|Somites": {
+   "value": 0.782,
+   "nCells": 9678,
+   "description": "Lineage coupling between Neural plate and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 94
+  },
+  "Neural plate|Cardiac mesoderm": {
+   "value": 0.777,
+   "nCells": 1761,
+   "description": "Lineage coupling between Neural plate and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 96
+  },
+  "Neural plate|Endothelium": {
+   "value": 0.388,
+   "nCells": 5013,
+   "description": "Lineage coupling between Neural plate and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 34
+  },
+  "Neural plate|Definitive endoderm": {
+   "value": 0.91,
+   "nCells": 3411,
+   "description": "Lineage coupling between Neural plate and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 54
+  },
+  "Neural plate|Gut tube": {
+   "value": 1,
+   "nCells": 6626,
+   "description": "Lineage coupling between Neural plate and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 24
+  },
+  "Neural plate|Neural plate": {
+   "value": 1,
+   "nCells": 3870,
+   "description": "Self-linkage baseline for Neural plate.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 11
+  },
+  "Neural plate|Neural crest": {
+   "value": 0.532,
+   "nCells": 2546,
+   "description": "Lineage coupling between Neural plate and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 27
+  },
+  "Neural plate|Surface ectoderm": {
+   "value": 0.817,
+   "nCells": 9750,
+   "description": "Lineage coupling between Neural plate and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 82
+  },
+  "Neural plate|Notochord": {
+   "value": 0.812,
+   "nCells": 357,
+   "description": "Lineage coupling between Neural plate and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 89
+  },
+  "Neural plate|Blood progenitors": {
+   "value": 0.473,
+   "nCells": 6006,
+   "description": "Lineage coupling between Neural plate and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 29
+  },
+  "Neural crest|Epiblast": {
+   "value": 0.217,
+   "nCells": 8451,
+   "description": "Lineage coupling between Neural crest and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 9
+  },
+  "Neural crest|Primitive streak": {
+   "value": 0.294,
+   "nCells": 5388,
+   "description": "Lineage coupling between Neural crest and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 8
+  },
+  "Neural crest|Nascent mesoderm": {
+   "value": 0.395,
+   "nCells": 931,
+   "description": "Lineage coupling between Neural crest and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 40
+  },
+  "Neural crest|Paraxial mesoderm": {
+   "value": 0.4,
+   "nCells": 6044,
+   "description": "Lineage coupling between Neural crest and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 21
+  },
+  "Neural crest|Somites": {
+   "value": 0.525,
+   "nCells": 1856,
+   "description": "Lineage coupling between Neural crest and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 14
+  },
+  "Neural crest|Cardiac mesoderm": {
+   "value": 0.635,
+   "nCells": 7141,
+   "description": "Lineage coupling between Neural crest and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 45
+  },
+  "Neural crest|Endothelium": {
+   "value": 0.678,
+   "nCells": 8982,
+   "description": "Lineage coupling between Neural crest and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 3
+  },
+  "Neural crest|Definitive endoderm": {
+   "value": 0.404,
+   "nCells": 1137,
+   "description": "Lineage coupling between Neural crest and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 2
+  },
+  "Neural crest|Gut tube": {
+   "value": 0.423,
+   "nCells": 5335,
+   "description": "Lineage coupling between Neural crest and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 40
+  },
+  "Neural crest|Neural plate": {
+   "value": 0.884,
+   "nCells": 216,
+   "description": "Lineage coupling between Neural crest and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 92
+  },
+  "Neural crest|Neural crest": {
+   "value": 1,
+   "nCells": 3588,
+   "description": "Self-linkage baseline for Neural crest.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 94
+  },
+  "Neural crest|Surface ectoderm": {
+   "value": 0.898,
+   "nCells": 689,
+   "description": "Lineage coupling between Neural crest and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 68
+  },
+  "Neural crest|Notochord": {
+   "value": 0.959,
+   "nCells": 5884,
+   "description": "Lineage coupling between Neural crest and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 72
+  },
+  "Neural crest|Blood progenitors": {
+   "value": 0.614,
+   "nCells": 5986,
+   "description": "Lineage coupling between Neural crest and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 13
+  },
+  "Surface ectoderm|Epiblast": {
+   "value": 0.216,
+   "nCells": 7380,
+   "description": "Lineage coupling between Surface ectoderm and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 25
+  },
+  "Surface ectoderm|Primitive streak": {
+   "value": 0.34,
+   "nCells": 4424,
+   "description": "Lineage coupling between Surface ectoderm and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 15
+  },
+  "Surface ectoderm|Nascent mesoderm": {
+   "value": 0.349,
+   "nCells": 9793,
+   "description": "Lineage coupling between Surface ectoderm and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 31
+  },
+  "Surface ectoderm|Paraxial mesoderm": {
+   "value": 0.313,
+   "nCells": 9110,
+   "description": "Lineage coupling between Surface ectoderm and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 36
+  },
+  "Surface ectoderm|Somites": {
+   "value": 0.323,
+   "nCells": 1677,
+   "description": "Lineage coupling between Surface ectoderm and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 40
+  },
+  "Surface ectoderm|Cardiac mesoderm": {
+   "value": 0.488,
+   "nCells": 9764,
+   "description": "Lineage coupling between Surface ectoderm and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 41
+  },
+  "Surface ectoderm|Endothelium": {
+   "value": 0.597,
+   "nCells": 9890,
+   "description": "Lineage coupling between Surface ectoderm and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 72
+  },
+  "Surface ectoderm|Definitive endoderm": {
+   "value": 0.456,
+   "nCells": 9468,
+   "description": "Lineage coupling between Surface ectoderm and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 30
+  },
+  "Surface ectoderm|Gut tube": {
+   "value": 0.602,
+   "nCells": 2326,
+   "description": "Lineage coupling between Surface ectoderm and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 71
+  },
+  "Surface ectoderm|Neural plate": {
+   "value": 0.812,
+   "nCells": 3296,
+   "description": "Lineage coupling between Surface ectoderm and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 40
+  },
+  "Surface ectoderm|Neural crest": {
+   "value": 0.751,
+   "nCells": 1927,
+   "description": "Lineage coupling between Surface ectoderm and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 85
+  },
+  "Surface ectoderm|Surface ectoderm": {
+   "value": 1,
+   "nCells": 6659,
+   "description": "Self-linkage baseline for Surface ectoderm.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 112
+  },
+  "Surface ectoderm|Notochord": {
+   "value": 0.851,
+   "nCells": 8571,
+   "description": "Lineage coupling between Surface ectoderm and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 69
+  },
+  "Surface ectoderm|Blood progenitors": {
+   "value": 0.699,
+   "nCells": 5963,
+   "description": "Lineage coupling between Surface ectoderm and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 56
+  },
+  "Notochord|Epiblast": {
+   "value": 0.111,
+   "nCells": 1896,
+   "description": "Lineage coupling between Notochord and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 10
+  },
+  "Notochord|Primitive streak": {
+   "value": 0.163,
+   "nCells": 3400,
+   "description": "Lineage coupling between Notochord and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 3
+  },
+  "Notochord|Nascent mesoderm": {
+   "value": 0.275,
+   "nCells": 2955,
+   "description": "Lineage coupling between Notochord and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 17
+  },
+  "Notochord|Paraxial mesoderm": {
+   "value": 0.358,
+   "nCells": 1539,
+   "description": "Lineage coupling between Notochord and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 11
+  },
+  "Notochord|Somites": {
+   "value": 0.292,
+   "nCells": 6283,
+   "description": "Lineage coupling between Notochord and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 14
+  },
+  "Notochord|Cardiac mesoderm": {
+   "value": 0.469,
+   "nCells": 4785,
+   "description": "Lineage coupling between Notochord and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 7
+  },
+  "Notochord|Endothelium": {
+   "value": 0.354,
+   "nCells": 3588,
+   "description": "Lineage coupling between Notochord and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 38
+  },
+  "Notochord|Definitive endoderm": {
+   "value": 0.769,
+   "nCells": 4765,
+   "description": "Lineage coupling between Notochord and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.01
+   },
+   "sharedClones": 65
+  },
+  "Notochord|Gut tube": {
+   "value": 0.668,
+   "nCells": 7570,
+   "description": "Lineage coupling between Notochord and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 36
+  },
+  "Notochord|Neural plate": {
+   "value": 0.593,
+   "nCells": 1791,
+   "description": "Lineage coupling between Notochord and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 44
+  },
+  "Notochord|Neural crest": {
+   "value": 0.515,
+   "nCells": 541,
+   "description": "Lineage coupling between Notochord and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 8
+  },
+  "Notochord|Surface ectoderm": {
+   "value": 0.814,
+   "nCells": 5323,
+   "description": "Lineage coupling between Notochord and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 99
+  },
+  "Notochord|Notochord": {
+   "value": 1,
+   "nCells": 5353,
+   "description": "Self-linkage baseline for Notochord.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 68
+  },
+  "Notochord|Blood progenitors": {
+   "value": 1,
+   "nCells": 8866,
+   "description": "Lineage coupling between Notochord and Blood progenitors inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 32
+  },
+  "Blood progenitors|Epiblast": {
+   "value": 0.084,
+   "nCells": 4002,
+   "description": "Lineage coupling between Blood progenitors and Epiblast inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 6
+  },
+  "Blood progenitors|Primitive streak": {
+   "value": 0.115,
+   "nCells": 3380,
+   "description": "Lineage coupling between Blood progenitors and Primitive streak inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 5
+  },
+  "Blood progenitors|Nascent mesoderm": {
+   "value": 0.206,
+   "nCells": 8742,
+   "description": "Lineage coupling between Blood progenitors and Nascent mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 7
+  },
+  "Blood progenitors|Paraxial mesoderm": {
+   "value": 0.262,
+   "nCells": 5026,
+   "description": "Lineage coupling between Blood progenitors and Paraxial mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.0001
+   },
+   "sharedClones": 24
+  },
+  "Blood progenitors|Somites": {
+   "value": 0.323,
+   "nCells": 4205,
+   "description": "Lineage coupling between Blood progenitors and Somites inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 10
+  },
+  "Blood progenitors|Cardiac mesoderm": {
+   "value": 0.341,
+   "nCells": 615,
+   "description": "Lineage coupling between Blood progenitors and Cardiac mesoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 4
+  },
+  "Blood progenitors|Endothelium": {
+   "value": 0.28,
+   "nCells": 3522,
+   "description": "Lineage coupling between Blood progenitors and Endothelium inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 19
+  },
+  "Blood progenitors|Definitive endoderm": {
+   "value": 0.464,
+   "nCells": 3915,
+   "description": "Lineage coupling between Blood progenitors and Definitive endoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 43
+  },
+  "Blood progenitors|Gut tube": {
+   "value": 0.516,
+   "nCells": 3616,
+   "description": "Lineage coupling between Blood progenitors and Gut tube inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.00001
+   },
+   "sharedClones": 21
+  },
+  "Blood progenitors|Neural plate": {
+   "value": 0.653,
+   "nCells": 2787,
+   "description": "Lineage coupling between Blood progenitors and Neural plate inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 69
+  },
+  "Blood progenitors|Neural crest": {
+   "value": 0.594,
+   "nCells": 1356,
+   "description": "Lineage coupling between Blood progenitors and Neural crest inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 6
+  },
+  "Blood progenitors|Surface ectoderm": {
+   "value": 0.894,
+   "nCells": 5836,
+   "description": "Lineage coupling between Blood progenitors and Surface ectoderm inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.1
+   },
+   "sharedClones": 71
+  },
+  "Blood progenitors|Notochord": {
+   "value": 1,
+   "nCells": 2060,
+   "description": "Lineage coupling between Blood progenitors and Notochord inferred from shared clonal ancestry.",
+   "stat": {
+    "pValue": 0.000001
+   },
+   "sharedClones": 31
+  },
+  "Blood progenitors|Blood progenitors": {
+   "value": 1,
+   "nCells": 9726,
+   "description": "Self-linkage baseline for Blood progenitors.",
+   "stat": {
+    "pValue": 0.001
+   },
+   "sharedClones": 55
+  }
+ },
+ "scale": {
+  "label": "Linkage score",
+  "min": 0,
+  "max": 1
+ },
+ "note": "Placeholder data — replace with exported lineage-coupling matrix."
+}

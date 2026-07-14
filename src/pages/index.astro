@@ -1,0 +1,206 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import { STATS, CITATION, SITE } from '../config/site';
+import { withBase } from '../lib/base';
+
+const cards = [
+  {
+    href: '/explore',
+    title: 'Explore',
+    body: 'Browse the full single-cell atlas in the interactive exploration tool.',
+  },
+  {
+    href: '/linkage',
+    title: 'Linkage',
+    body: 'An interactive heatmap of lineage relationships between cell types.',
+  },
+  {
+    href: '/fate',
+    title: 'Fate',
+    body: 'A Sankey view of how progenitors flow into fates across development.',
+  },
+  {
+    href: '/download',
+    title: 'Download',
+    body: 'Get the processed data and lineage trees from the Zenodo archive.',
+  },
+];
+---
+
+<Base>
+  <Hero />
+
+  <!-- stat tiles -->
+  <section class="container">
+    <div class="stats">
+      {
+        STATS.map((s) => (
+          <div class="stat">
+            <div class="stat__value">{s.value}</div>
+            <div class="stat__label">{s.label}</div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- overview -->
+  <section class="section container">
+    <div class="grid-2">
+      <div>
+        <p class="eyebrow">The project</p>
+        <h2>A quantitative framework for cell fate specification</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A comprehensive cell fate map of mammalian embryogenesis has long been
+          out of reach because of the scale, cellular diversity, and
+          non-deterministic nature of development in utero. Using PEtracer to
+          continuously install heritable genetic marks as cells divide, MELT
+          reconstructs lineage trees that resolve roughly 75% of cell divisions.
+        </p>
+        <p>
+          Pairing these trees with deep transcriptional profiling, we quantify
+          fate biases, restriction timing, progenitor pool sizes, and lineage
+          relationships across the embryo — revealing strikingly reproducible
+          lineage architecture across replicate embryos despite the regulative
+          flexibility of mammalian development. The result is a lineage-resolved
+          reference for generating and contextualizing developmental hypotheses
+          at organismal scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- explore cards -->
+  <section class="section container">
+    <p class="eyebrow">What you'll find here</p>
+    <div class="cards">
+      {
+        cards.map((c) => (
+          <a class="card explore-card" href={withBase(c.href)}>
+            <h3>{c.title}</h3>
+            <p>{c.body}</p>
+            <span class="explore-card__go">Open →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- citation -->
+  <section class="section container">
+    <div class="cite card">
+      <p class="eyebrow">Cite this work</p>
+      <p class="cite__text">
+        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal}.
+      </p>
+      <p class="cite__doi">
+        doi:{' '}
+        <a href={`https://doi.org/${CITATION.doi}`}>{CITATION.doi}</a>
+        <span class="cite__note"> — placeholder, update on publication.</span>
+      </p>
+      <a class="btn btn-ghost" href={withBase('/download')}>Data &amp; citation →</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .stat {
+    background: #fff;
+    padding: 1.6rem 1.4rem;
+  }
+  .stat__value {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 1.2rem + 1.8vw, 2.5rem);
+    color: var(--accent-ink);
+    line-height: 1;
+  }
+  .stat__label {
+    margin-top: 0.5rem;
+    color: var(--ink-3);
+    font-size: var(--fs-small);
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(1.5rem, 1rem + 3vw, 4rem);
+    align-items: start;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .explore-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    color: var(--ink);
+    transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease),
+      border-color 0.18s var(--ease);
+  }
+  .explore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+    color: var(--ink);
+  }
+  .explore-card h3 {
+    margin-bottom: 0.35rem;
+  }
+  .explore-card p {
+    color: var(--ink-2);
+    font-size: var(--fs-small);
+    flex: 1;
+  }
+  .explore-card__go {
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: var(--fs-small);
+  }
+
+  .cite {
+    padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  }
+  .cite__text {
+    font-size: 1.15rem;
+    max-width: 60ch;
+  }
+  .cite__doi {
+    color: var(--ink-2);
+    font-size: var(--fs-small);
+  }
+  .cite__note {
+    color: var(--ink-3);
+  }
+
+  @media (max-width: 900px) {
+    .stats,
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
