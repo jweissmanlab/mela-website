@@ -47,3 +47,38 @@ export interface FateData {
   flows: FateFlow[]; // coarse (lineage-level) — default view
   typeFlows: FateFlow[]; // fine (cell-type-level) — shown when a lineage is expanded
 }
+
+// ---- Cell types page ----
+export interface CTNode {
+  name: string;
+  level: 'root' | 'germ_layer' | 'lineage' | 'cell_type' | 'cell_subtype';
+  color: string;
+  id?: string; // detail key for selectable nodes
+  children: CTNode[];
+}
+export interface CTStat {
+  mean: number;
+  reps: { embryo: string; value: number }[];
+}
+export interface CTLink {
+  partner: string;
+  normValue: number | null;
+  novelty: number; // 0 = not flagged, 1..3 = novelty level
+  explanation: string;
+}
+export interface CTDetail {
+  id: string;
+  name: string;
+  level: 'type' | 'subtype';
+  umap: string | null;
+  globalMarkers: string[];
+  localMarkers: string[];
+  stages: string[];
+  description: string;
+  clade: { nClades: CTStat; depth: CTStat; size: CTStat } | null;
+  topLinks: CTLink[];
+}
+export interface CellTypeData {
+  tree: CTNode;
+  details: Record<string, CTDetail>;
+}

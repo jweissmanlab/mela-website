@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import CellTypeExplorer from '../components/CellTypeExplorer';
+---
+
+<Base
+  title="Cell types"
+  description="Browse the MELA cell-type hierarchy with UMAPs, markers, and lineage statistics."
+>
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Cell types</p>
+      <h1>Cell type hierarchy</h1>
+      <p class="lead">
+        The atlas is organized as uncommitted → germ layer → lineage → cell type
+        → subtype. Click any cell type or
+        subtype to see its UMAP, marker genes, description, E9.5 clade
+        statistics, and top ancestral linkages.
+      </p>
+    </div>
+
+    <CellTypeExplorer client:load />
+  </section>
+</Base>
