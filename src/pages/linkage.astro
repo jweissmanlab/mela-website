@@ -5,16 +5,19 @@ import LinkageHeatmap from '../components/LinkageHeatmap';
 
 <Base
   title="Linkage"
-  description="Interactive heatmap of lineage relationships between cell types."
+  description="Interactive heatmap of ancestral linkage between cell types across stages."
 >
   <section class="section container">
     <div class="head prose">
       <p class="eyebrow">Linkage</p>
-      <h1>Lineage relationships between cell types</h1>
+      <h1>Ancestral linkage</h1>
       <p class="lead">
-        Each cell shows the lineage coupling between a pair of cell types —
-        higher scores mean the two share more clonal ancestry. Hover to trace a
-        row and column; click any cell to inspect the pair in detail.
+        Each cell shows the normalized ancestral linkage between a pair of cell
+        populations — how much more (red) or less (blue) they share clonal
+        ancestry than expected. Choose a stage and resolution with the dropdowns;
+        colored strips along the top and right mark each population's lineage.
+        Click a cell for its p-value and variance, or click a lineage to isolate
+        it.
       </p>
     </div>
 

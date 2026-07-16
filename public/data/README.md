@@ -1,52 +1,66 @@
 # Data files
 
-The interactive **Linkage** and **Fate** pages load JSON from this folder at
-runtime. The files here are **placeholders** with realistic mock values so the
-UI works end-to-end. Replace them with real exports in the same schema — no code
-changes are needed as long as the schema matches.
-
-TypeScript definitions live in `src/lib/data.ts`.
+This folder holds only the **generated JSON** that the Linkage and Fate pages
+fetch at runtime (so it is the only data shipped in the build). The **source
+CSVs live in the repo-root `data/` directory** (not shipped) and are converted by
+the scripts in `../../scripts/`. TypeScript definitions live in `src/lib/data.ts`.
 
 ---
 
-## `linkage.json` → Linkage heatmap
+## `linkage/*.json` → Linkage heatmap
+
+**Generated** by `scripts/build_linkage.mjs` — do not hand-edit. One JSON is
+emitted per **stage × resolution** combination into `linkage/`, plus an
+`index.json` manifest. Inputs (in repo-root `data/linkage/`):
+
+- `{stage}_{level}_linkage.csv` — long-form upper-triangle stats, columns
+  `source, target, value, norm_value, z_score, norm_value_var, p_value,
+  source_n, target_n`. `stage` ∈ E7.5…E9.5, `level` ∈ `type`, `subtype`.
+- `{stage}_{level}_order.csv` — clustered display order, one entity per line
+  (the `order` returned by `plot_linkage_heatmap`). If missing, a lineage-grouped
+  fallback order is used.
+- `data/cell_types.csv` — provides `cell_subtype/cell_type → lineage`.
+
+Rebuild after updating any input:
+
+```bash
+node scripts/build_linkage.mjs      # -> linkage/{stage}_{level}.json + index.json
+```
+
+The page has **Stage** and **Resolution** dropdowns that load the matching
+`linkage/{stage}_{level}.json`. Rendered as a canvas that fills the available
+width: a full symmetric `norm_value` heatmap (RdBu_r, ±1.5) with axis labels
+always shown, lineage colour strips on the top/right margins, and a detail
+sidebar (p-value, variance, n) shown when a cell is clicked (the heatmap shrinks
+to make room). Clicking a lineage strip or legend entry isolates that lineage.
+
+Emitted schema (consumed by `LinkageHeatmap.tsx`):
 
 ```jsonc
 {
   "title": "…",
-  "axes": {
-    "rows": ["Epiblast", "…"],   // row cell types (top→bottom)
-    "cols": ["Epiblast", "…"]    // column cell types (left→right)
-  },
-  "matrix": [[1.0, 0.42, …], …], // matrix[i][j] = value for rows[i] × cols[j]
-  "meta": {                      // per-cell detail shown in the sidebar
-    "Epiblast|Neural plate": {   // key is "<rowLabel>|<colLabel>"
-      "value": 0.42,
-      "nCells": 1234,
-      "description": "…",
-      "stat": { "pValue": 1e-3 },
-      "sharedClones": 57
-    }
-  },
-  "scale": { "label": "Linkage score", "min": 0, "max": 1 }
+  "stage": "E8.5", "level": "subtype",
+  "subtypes": ["Allantois", "…"],       // axis entities in display order (rows = cols)
+  "lineages": { "Allantois": "Extraembryonic mesoderm" },  // subtype -> lineage
+  "lineageOrder": ["Ectoderm", "…"],    // legend / strip grouping order
+  "palette": { "Ectoderm": "#1874CD" }, // lineage -> color
+  "nOf": { "Allantois": 78 },           // subtype -> n cells
+  "value": [[null, 0.35, …], …],        // norm_value[i][j] (null on diagonal)
+  "varr":  [[…]],                       // norm_value_var[i][j]
+  "pval":  [[…]],                       // p_value[i][j]
+  "scale": { "vmin": -1.5, "center": 0, "vmax": 1.5, "label": "Normalized linkage" }
 }
 ```
 
-- `matrix` dimensions must be `rows.length × cols.length`.
-- Every `matrix` cell should have a matching `meta["row|col"]` entry (missing
-  entries render as "No data for this pair").
-- Colors map `scale.min…scale.max` onto the teal ramp.
-- Heatmaps larger than ~150×150 will need a canvas renderer (see the plan);
-  the current SVG grid targets moderate matrices.
-
 ## `fate.json` → Fate Sankey (time-resolved lineage restriction)
 
-**Generated** from two CSVs by `scripts/build_fate.mjs` — do not hand-edit:
+**Generated** from two CSVs in repo-root `data/` by `scripts/build_fate.mjs` —
+do not hand-edit:
 
-- `fate_restriction.csv` — columns `source_time, target_time, source, target, count`
+- `data/fate_restriction.csv` — columns `source_time, target_time, source, target, count`
   (a flow of `count` cells from category `source` at `source_time` to `target`
   at `target_time`; timepoints are consecutive).
-- `cell_types.csv` — provides the `lineage → germ_layer` hierarchy.
+- `data/cell_types.csv` — provides the `lineage → germ_layer` hierarchy.
 
 The category hierarchy is **Uncommitted → germ_layer → lineage**. Colors are set
 by the `PALETTE` object at the top of `scripts/build_fate.mjs` — paste the
@@ -84,9 +98,11 @@ fill the plot while the timepoints stay fixed.
 
 ---
 
-## Regenerating placeholders
+## Rebuilding
 
-- `fate.json` — real data; rebuild with `node scripts/build_fate.mjs`.
-- `linkage.json` — still placeholder; regenerate with
-  `node scripts/gen_data.mjs public/data` (note: this script also overwrites
-  `fate.json` with mock data, so re-run `build_fate.mjs` afterwards).
+Both JSON files are generated from the CSVs in this folder:
+
+```bash
+node scripts/build_linkage.mjs   # -> linkage.json
+node scripts/build_fate.mjs      # -> fate.json
+```

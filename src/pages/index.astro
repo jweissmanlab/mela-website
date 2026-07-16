@@ -45,6 +45,21 @@ const cards = [
     </div>
   </section>
 
+  <!-- full-width lineage trees -->
+  <section class="tree-band">
+    <img
+      src={withBase('/img/website_trees_v1.webp')}
+      alt="Reconstructed lineage trees across MELA mouse embryos"
+      width="2534"
+      height="1352"
+      loading="lazy"
+      decoding="async"
+    />
+    <p class="tree-band__cap">
+      Reconstructed lineage trees resolving ~75% of cell divisions across 16 embryos.
+    </p>
+  </section>
+
   <!-- overview -->
   <section class="section container">
     <div class="grid-2">
@@ -94,12 +109,11 @@ const cards = [
     <div class="cite card">
       <p class="eyebrow">Cite this work</p>
       <p class="cite__text">
-        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal}.
+        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal} ({CITATION.year}).
       </p>
       <p class="cite__doi">
         doi:{' '}
-        <a href={`https://doi.org/${CITATION.doi}`}>{CITATION.doi}</a>
-        <span class="cite__note"> — placeholder, update on publication.</span>
+        <a href={CITATION.url} target="_blank" rel="noopener noreferrer">{CITATION.doi}</a>
       </p>
       <a class="btn btn-ghost" href={withBase('/download')}>Data &amp; citation →</a>
     </div>
@@ -107,6 +121,24 @@ const cards = [
 </Base>
 
 <style>
+  .tree-band {
+    max-width: var(--max-w);
+    margin: clamp(2.25rem, 1.5rem + 3vw, 4.5rem) auto clamp(1rem, 0.5rem + 2vw, 2.5rem);
+    padding-inline: var(--gutter);
+  }
+  .tree-band img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--r-lg);
+  }
+  .tree-band__cap {
+    margin-top: 0.85rem;
+    font-size: var(--fs-small);
+    color: var(--ink-3);
+    text-align: center;
+  }
+
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

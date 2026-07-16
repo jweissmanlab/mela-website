@@ -29,12 +29,13 @@ const files = [
   },
 ];
 
-const bibtex = `@article{mela${CITATION.year},
+const bibtex = `@article{colgan${CITATION.year}mela,
   title   = {${CITATION.title}},
   author  = {${CITATION.authors}},
   journal = {${CITATION.journal}},
   year    = {${CITATION.year}},
-  doi     = {${CITATION.doi}}
+  doi     = {${CITATION.doi}},
+  url     = {${CITATION.url}}
 }`;
 ---
 
@@ -80,8 +81,8 @@ const bibtex = `@article{mela${CITATION.year},
     <div class="cite-block card">
       <p class="eyebrow">Cite this dataset</p>
       <p class="cite-block__ref">
-        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal}.
-        doi:<a href={`https://doi.org/${CITATION.doi}`}>{CITATION.doi}</a>
+        {CITATION.authors}. <em>{CITATION.title}.</em> {CITATION.journal} ({CITATION.year}).
+        doi:<a href={CITATION.url} target="_blank" rel="noopener noreferrer">{CITATION.doi}</a>
       </p>
       <details>
         <summary>BibTeX</summary>

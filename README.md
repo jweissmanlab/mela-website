@@ -77,10 +77,10 @@ public/
 
 - **Site config** (explore-tool URL, Zenodo record/DOI, citation, GitHub link,
   Home stat tiles): edit `src/config/site.ts`.
-- **Plot data**: replace `public/data/linkage.json` and `public/data/fate.json`.
-  The schema is documented in [`public/data/README.md`](public/data/README.md);
-  matching it means no code changes. The current files are placeholders
-  (regenerate with `node scripts/gen_data.mjs public/data`).
+- **Plot data**: `public/data/linkage.json` and `public/data/fate.json` are
+  generated from CSVs — rebuild with `node scripts/build_linkage.mjs` and
+  `node scripts/build_fate.mjs`. Schemas are documented in
+  [`public/data/README.md`](public/data/README.md).
 - **Design tokens** (colors, type scale, spacing): `src/styles/tokens.css`.
 
 ## Deployment
@@ -98,8 +98,8 @@ the repo/URL changes, update `site` and `base` there.
 
 ## Notes
 
-- The **Explore** tool is hosted on a private institute IP, so off-campus
-  visitors see a fallback (screenshot + "open in new tab") until it has a public
-  URL. Swap `exploreUrl` in `src/config/site.ts` when one exists.
+- The **Explore** page embeds the tool at `SITE.exploreUrl`
+  (`src/config/site.ts`); if it can't be framed, a fallback with an
+  "open in new tab" button is shown.
 - Placeholders to replace before publication: Zenodo DOI, author list, and the
   full citation (all in `src/config/site.ts`).

@@ -29,8 +29,7 @@ const { src, title } = Astro.props;
       <div class="embed__fallback-inner">
         <h3>The exploration tool isn't loading here</h3>
         <p>
-          The tool is currently hosted on the institute network. If you're
-          off-campus or it can't be framed, open it directly in a new tab.
+          If it can't be framed on this page, open it directly in a new tab.
         </p>
         <a class="btn btn-primary" href={src} target="_blank" rel="noopener noreferrer">
           Open the tool ↗
@@ -59,6 +58,20 @@ const { src, title } = Astro.props;
       if (!loaded) fallback.hidden = false;
     }, 6000);
   });
+
+  // Keep two-finger / pinch zoom from zooming the whole page. Trackpad pinch
+  // arrives as ctrl+wheel; Safari uses gesture events. We block those from
+  // zooming the parent document so zoom stays within the embedded tool.
+  document.addEventListener(
+    'wheel',
+    (e) => {
+      if (e.ctrlKey) e.preventDefault();
+    },
+    { passive: false }
+  );
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach((type) =>
+    document.addEventListener(type, (e) => e.preventDefault(), { passive: false })
+  );
 </script>
 
 <style>
@@ -103,8 +116,8 @@ const { src, title } = Astro.props;
   }
   .embed__stage {
     position: relative;
-    aspect-ratio: 16 / 10;
-    min-height: 420px;
+    height: clamp(560px, 82vh, 940px);
+    overscroll-behavior: contain;
   }
   .embed__frame {
     position: absolute;
@@ -112,6 +125,8 @@ const { src, title } = Astro.props;
     width: 100%;
     height: 100%;
     border: 0;
+    /* keep touch gestures (pinch/scroll) inside the tool, not the page */
+    touch-action: none;
   }
   .embed__fallback {
     position: absolute;

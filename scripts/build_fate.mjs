@@ -6,12 +6,13 @@
 // front-end filters to the selected branch and normalizes per timepoint.
 //
 // Usage:  node scripts/build_fate.mjs
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const DATA = join(HERE, '..', 'public', 'data');
+const IN = join(HERE, '..', 'data'); // source CSVs (not shipped)
+const DATA = join(HERE, '..', 'public', 'data'); // generated JSON (shipped)
 
 // minimal CSV parser (handles simple quoted fields)
 function parseCsv(text) {
@@ -39,8 +40,8 @@ function splitLine(line) {
   return out.map((s) => s.trim());
 }
 
-const fate = parseCsv(readFileSync(join(DATA, 'fate_restriction.csv'), 'utf8'));
-const cells = parseCsv(readFileSync(join(DATA, 'cell_types.csv'), 'utf8'));
+const fate = parseCsv(readFileSync(join(IN, 'fate_restriction.csv'), 'utf8'));
+const cells = parseCsv(readFileSync(join(IN, 'cell_types.csv'), 'utf8'));
 
 // ---------------------------------------------------------------------------
 // PALETTE — from devmap.config germ_layer_palette / lineage_palette.
@@ -145,7 +146,7 @@ const times = [...new Set(fate.flatMap((r) => [+r.source_time, +r.target_time]))
   (a, b) => a - b
 );
 
-// flows
+// flows (coarse / lineage level — default view)
 const flows = fate
   .map((r) => ({
     st: +r.source_time,
@@ -156,15 +157,95 @@ const flows = fate
   }))
   .filter((f) => f.count > 0);
 
+// ---------------------------------------------------------------------------
+// Cell-type resolution (shown when a lineage is expanded).
+//   type_fate_restriction.csv: same schema, categories at cell-type level
+//   cell_types.csv: cell_type -> lineage and cell_type -> color (type_color)
+// ---------------------------------------------------------------------------
+// count lineages / colors across the subtype rows for each cell type, then
+// take the most common (cell_types.csv has one row per subtype).
+const typeLinCount = {}; // cell_type -> {lineage: n}
+const typeColorCount = {}; // cell_type -> {color: n}
+for (const r of cells) {
+  if (!r.cell_type) continue;
+  (typeLinCount[r.cell_type] ??= {});
+  if (r.lineage) typeLinCount[r.cell_type][r.lineage] = (typeLinCount[r.cell_type][r.lineage] || 0) + 1;
+  (typeColorCount[r.cell_type] ??= {});
+  const c = (r.type_color || '').toLowerCase();
+  if (c) typeColorCount[r.cell_type][c] = (typeColorCount[r.cell_type][c] || 0) + 1;
+}
+const modal = (m) =>
+  m ? Object.entries(m).sort((a, b) => b[1] - a[1])[0]?.[0] : undefined;
+const typeToLineage = {};
+for (const t in typeLinCount) {
+  const best = modal(typeLinCount[t]);
+  if (best) typeToLineage[t] = best;
+}
+const typeColor = (t) => modal(typeColorCount[t]) || FALLBACK;
+
+let typeFlows = [];
+let fullOrder = order;
+const typeFile = join(IN, 'type_fate_restriction.csv');
+if (existsSync(typeFile)) {
+  const typeFate = parseCsv(readFileSync(typeFile, 'utf8'));
+  const typeUsed = new Set();
+  for (const r of typeFate) {
+    typeUsed.add(r.source);
+    typeUsed.add(r.target);
+  }
+
+  // add cell-type categories (anything not already root/germ/lineage)
+  let orphans = 0;
+  for (const name of typeUsed) {
+    if (categories[name]) continue; // already classified from the coarse file
+    const lin = typeToLineage[name];
+    const parent = lin && categories[lin] ? lin : UNCOMMITTED;
+    if (!(lin && categories[lin])) orphans++;
+    categories[name] = { level: 'cell_type', parent, color: typeColor(name) };
+  }
+  if (orphans) console.log(`  note: ${orphans} cell type(s) had no matching lineage — attached to Uncommitted`);
+
+  // vertical order: cell types sit directly under their lineage
+  const ctByLineage = {};
+  for (const name of typeUsed) {
+    const cat = categories[name];
+    if (cat?.level === 'cell_type') (ctByLineage[cat.parent] ??= []).push(name);
+  }
+  for (const k in ctByLineage) ctByLineage[k].sort((a, b) => a.localeCompare(b));
+  fullOrder = [];
+  for (const c of order) {
+    fullOrder.push(c);
+    if (categories[c]?.level === 'lineage' && ctByLineage[c])
+      fullOrder.push(...ctByLineage[c]);
+  }
+  for (const name of typeUsed)
+    if (categories[name]?.level === 'cell_type' && !fullOrder.includes(name))
+      fullOrder.push(name);
+
+  typeFlows = typeFate
+    .map((r) => ({
+      st: +r.source_time,
+      tt: +r.target_time,
+      s: r.source,
+      t: r.target,
+      count: +r.count,
+    }))
+    .filter((f) => f.count > 0);
+  console.log(
+    `type flows: ${typeFlows.length}, cell-type categories: ${fullOrder.length - order.length}`
+  );
+}
+
 const out = {
   title: 'Lineage restriction over developmental time',
   timePrefix: 'E',
   timeLabel: 'Embryonic day',
   valueLabel: 'fraction of cells',
   times,
-  order,
+  order: fullOrder,
   categories,
   flows,
+  typeFlows,
 };
 
 writeFileSync(join(DATA, 'fate.json'), JSON.stringify(out));

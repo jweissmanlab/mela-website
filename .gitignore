@@ -17,3 +17,6 @@ npm-debug.log*
 
 # macOS AppleDouble metadata
 ._*
+
+# local agent guide (not shared)
+CLAUDE.md

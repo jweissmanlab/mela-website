@@ -4,12 +4,13 @@ export const SITE = {
   title: 'MELA',
   full: 'Mouse Embryonic Lineage Atlas',
   tagline: 'A cell fate map of mammalian embryogenesis',
-  // Data-exploration tool. Swap for a public URL once one exists (see Explore page).
-  exploreUrl: 'http://172.18.104.15:8080',
+  // Data-exploration tool (public).
+  exploreUrl: 'https://mela.explorer.wi.mit.edu',
   // Placeholder — replace with the real Zenodo record.
   zenodoRecordUrl: 'https://zenodo.org/records/0000000',
   zenodoDoi: '10.5281/zenodo.0000000',
   githubUrl: 'https://github.com/jweissmanlab/mela-website',
+  paperUrl: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v1',
   contactEmail: 'wcolgan@wi.mit.edu',
 };
 
@@ -30,12 +31,14 @@ export const NAV = [
   { href: '/download', label: 'Download' },
 ];
 
-// Placeholder citation — replace on publication.
+// Citation — from bioRxiv (doi:10.64898/2026.05.07.722278).
 export const CITATION = {
-  authors: 'Author A, Author B, … Weissman J.S.',
+  authors:
+    'Colgan WN, Koblan LW, Villagrana J, Hou T-CJ, Wang M, Gowri G, Chandler W, Sepulveda LA, Ciftci D, Smolyar K, Young A, Wittler L, Markoulaki S, Loh KM, Zhuang X, Yosef N, Smith ZD, Weissman JS',
   title:
-    'A lineage-resolved cell fate map of mouse gastrulation and early organogenesis',
-  journal: 'Journal (year)',
+    'Comprehensive Lineage Tracing Maps the Landscape of Cell Fate Decisions in Mouse Embryogenesis',
+  journal: 'bioRxiv',
   year: '2026',
-  doi: '10.0000/mela.2026',
+  doi: '10.64898/2026.05.07.722278',
+  url: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v1',
 };

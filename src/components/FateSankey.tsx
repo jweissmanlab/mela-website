@@ -23,6 +23,7 @@ export default function FateSankey() {
   const [data, setData] = useState<FateData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [sel, setSel] = useState<string | null>(null); // restrict focus
+  const [metric, setMetric] = useState<'percent' | 'count'>('percent');
   const [tip, setTip] = useState<Tip | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -74,15 +75,41 @@ export default function FateSankey() {
   const layout = useMemo(() => {
     if (!data || !relatives) return null;
 
-    // visible categories: all, or the selected branch (ancestors ∪ self ∪ descendants)
+    // Selecting a lineage drills to cell-type resolution (type flows); otherwise
+    // the coarse lineage-level flows are used.
+    const cats = data.categories;
+    const selLevel = sel ? cats[sel]?.level : null;
+    const childLevels = (c: string) =>
+      new Set(
+        Object.keys(cats)
+          .filter((k) => cats[k].parent === c)
+          .map((k) => cats[k].level)
+      );
+    const kids = sel ? childLevels(sel) : new Set<string>();
+    // Coarse (lineage-level) flows for the default view and germ layers that
+    // have lineage children. Type-level flows once we drill into a lineage, a
+    // germ-layer-that-is-a-lineage (Endoderm), or a single cell type.
+    const coarse = !sel || kids.has('lineage');
+    const activeFlows = coarse ? data.flows : data.typeFlows;
+
+    // visible categories: the selected branch's ancestors + itself, plus its
+    // descendants (lineages when coarse; cell types when fine). Selecting a
+    // cell type shows just its trajectory (no descendants).
     const visible = new Set<string>();
-    if (!sel) Object.keys(data.categories).forEach((c) => visible.add(c));
-    else {
+    if (!sel) {
+      Object.keys(cats).forEach((c) => {
+        if (cats[c].level !== 'cell_type') visible.add(c);
+      });
+    } else {
       relatives.ancestorsOf(sel).forEach((c) => visible.add(c));
-      relatives.descendantsOf(sel).forEach((c) => visible.add(c));
+      if (selLevel !== 'cell_type') {
+        relatives.descendantsOf(sel).forEach((c) => {
+          if (!coarse || cats[c].level !== 'cell_type') visible.add(c);
+        });
+      }
     }
 
-    let links = data.flows.filter(
+    let links = activeFlows.filter(
       (f) => f.count > 0 && visible.has(f.s) && visible.has(f.t)
     );
     if (links.length === 0) return null;
@@ -119,22 +146,41 @@ export default function FateSankey() {
       incoming.set(key(f.t, f.tt), (incoming.get(key(f.t, f.tt)) ?? 0) + f.count);
     }
 
-    // node_counts: outgoing at intermediate times, incoming at the final time
+    // node_counts: outgoing at intermediate times, incoming at the final time.
+    // rawCount keeps the absolute counts; nodeCount holds the display value
+    // (raw for "count" mode, per-timepoint fraction for "percent" mode).
+    const rawCount = new Map<string, number>();
     const nodeCount = new Map<string, number>();
     for (const t of times) {
       for (const c of categories) {
         const k = key(c, t);
-        nodeCount.set(k, outgoing.get(k) ?? incoming.get(k) ?? 0);
+        const v = outgoing.get(k) ?? incoming.get(k) ?? 0;
+        rawCount.set(k, v);
+        nodeCount.set(k, v);
       }
     }
-    // normalize each timepoint to sum 1
+    // per-timepoint raw totals
+    const colTotal = new Map<number, number>();
+    let maxColTotal = 0;
     for (const t of times) {
       let total = 0;
-      for (const c of categories) total += nodeCount.get(key(c, t))!;
-      if (total > 0)
-        for (const c of categories)
-          nodeCount.set(key(c, t), nodeCount.get(key(c, t))! / total);
+      for (const c of categories) total += rawCount.get(key(c, t))!;
+      colTotal.set(t, total);
+      maxColTotal = Math.max(maxColTotal, total);
     }
+
+    const percent = metric === 'percent';
+    if (percent) {
+      // normalize each timepoint to sum 1
+      for (const t of times) {
+        const total = colTotal.get(t)!;
+        if (total > 0)
+          for (const c of categories)
+            nodeCount.set(key(c, t), nodeCount.get(key(c, t))! / total);
+      }
+    }
+    // gap in the same units as the values (fraction vs. raw counts)
+    const gap = percent ? GAP : GAP * (maxColTotal || 1);
 
     // stack bars bottom -> top per timepoint
     const pos = new Map<string, [number, number]>(); // [y0, y1] in data units (y up)
@@ -144,7 +190,7 @@ export default function FateSankey() {
       for (const c of categories) {
         const size = nodeCount.get(key(c, t))!;
         pos.set(key(c, t), [y, y + size]);
-        if (size > 0) y += size + GAP;
+        if (size > 0) y += size + gap;
       }
       maxTop = Math.max(maxTop, y);
     }
@@ -225,11 +271,13 @@ export default function FateSankey() {
       h: number;
       color: string;
       frac: number;
+      count: number;
     }[];
     for (const t of times) {
       for (const c of categories) {
         const [y0, y1] = pos.get(key(c, t))!;
         if (y1 <= y0) continue;
+        const raw = rawCount.get(key(c, t))!;
         bars.push({
           cat: c,
           time: t,
@@ -238,7 +286,8 @@ export default function FateSankey() {
           y: yPix(y1),
           h: (y1 - y0) * yScale,
           color: data.categories[c]?.color ?? '#999',
-          frac: nodeCount.get(key(c, t))!,
+          frac: raw / (colTotal.get(t) || 1),
+          count: raw,
         });
       }
     }
@@ -246,7 +295,7 @@ export default function FateSankey() {
     const timeX = times.map((t) => ({ t, x: xPix(timeRank.get(t)!) }));
     const legend = categories; // bottom->top
     return { ribbons, bars, timeX, legend };
-  }, [data, relatives, sel]);
+  }, [data, relatives, sel, metric]);
 
   if (error) return <p className="fs-error">Couldn't load fate data ({error}).</p>;
   if (!data) return <p className="fs-loading">Loading Sankey…</p>;
@@ -288,11 +337,23 @@ export default function FateSankey() {
             </span>
           ))}
         </nav>
-        {sel && (
-          <button className="fs__reset" onClick={() => setSel(null)}>
-            Reset view
-          </button>
-        )}
+        <div className="fs__right">
+          <label className="fs__metric">
+            <span>Show</span>
+            <select
+              value={metric}
+              onChange={(e) => setMetric(e.target.value as 'percent' | 'count')}
+            >
+              <option value="percent">Percent</option>
+              <option value="count">Count</option>
+            </select>
+          </label>
+          {sel && (
+            <button className="fs__reset" onClick={() => setSel(null)}>
+              Reset view
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="fs__scroll">
@@ -325,9 +386,11 @@ export default function FateSankey() {
                       e,
                       `${r.s} → ${r.t}<span>${fmtTime(r.st)} → ${fmtTime(
                         r.tt
-                      )}</span><b>${(r.srcFrac * 100).toFixed(
-                        1
-                      )}% · ${r.count.toLocaleString()} cells</b>`
+                      )}</span><b>${
+                        metric === 'percent'
+                          ? `${(r.srcFrac * 100).toFixed(1)}% of source`
+                          : `${r.count.toLocaleString()} cells`
+                      }</b>`
                     )
                   }
                   onMouseLeave={() => setTip(null)}
@@ -338,7 +401,8 @@ export default function FateSankey() {
             {/* node bars (on top) */}
             <g className="fs__bars">
               {bars.map((b) => {
-                const clickable = b.cat !== 'Uncommitted';
+                const lvl = data.categories[b.cat]?.level;
+                const clickable = lvl !== 'root'; // germ layer, lineage, or cell type
                 return (
                   <rect
                     key={key(b.cat, b.time)}
@@ -354,11 +418,11 @@ export default function FateSankey() {
                     onMouseMove={(e) =>
                       showTip(
                         e,
-                        `${b.cat}<span>${fmtTime(b.time)}</span><b>${(
-                          b.frac * 100
-                        ).toFixed(1)}% of cells</b>${
-                          clickable ? '<i>click to restrict</i>' : ''
-                        }`
+                        `${b.cat}<span>${fmtTime(b.time)}</span><b>${
+                          metric === 'percent'
+                            ? `${(b.frac * 100).toFixed(1)}% of cells`
+                            : `${b.count.toLocaleString()} cells`
+                        }</b>${clickable ? '<i>click to restrict</i>' : ''}`
                       )
                     }
                     onMouseLeave={() => setTip(null)}
@@ -398,9 +462,11 @@ export default function FateSankey() {
       )}
 
       <p className="fs__hint">
-        Bar height is the fraction of cells in each commitment state at that
-        timepoint; ribbons fill each bar exactly at both ends. Click a germ layer
-        or lineage to restrict the view to that branch and its ancestors.
+        Bar height is the {metric === 'percent' ? 'fraction' : 'number'} of
+        cells in each commitment state at that timepoint; ribbons fill each bar
+        exactly at both ends. Click a germ layer to focus its lineages, a lineage
+        to expand it into its cell types, or a cell type to trace it alone; use
+        the breadcrumb to step back out.
       </p>
     </div>
   );

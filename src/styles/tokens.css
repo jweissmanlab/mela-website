@@ -1,13 +1,13 @@
 /* MELA design tokens — clean editorial / journal */
 :root {
   /* --- color --- */
-  --paper: #fbfaf8;
-  --paper-2: #f3f1ec;
+  --paper: #ffffff;
+  --paper-2: #f4f5f6;
   --ink: #1a1a1a;
-  --ink-2: #4a4a46;
-  --ink-3: #7c7a73;
-  --rule: #e3e0d8;
-  --rule-strong: #cbc7bc;
+  --ink-2: #45464b;
+  --ink-3: #6f7176;
+  --rule: #e7e8ea;
+  --rule-strong: #d2d4d7;
 
   --accent: #0e7c7b;
   --accent-hover: #0a5f5e;

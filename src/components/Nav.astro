@@ -14,7 +14,7 @@ function isActive(href: string) {
   <div class="container nav__inner">
     <a class="nav__brand" href={withBase('/')}>
       <span class="nav__dot" aria-hidden="true"></span>
-      <span class="nav__mark">{SITE.title}</span>
+      <span class="nav__mark">{SITE.full}</span>
     </a>
     <nav aria-label="Primary">
       <ul class="nav__list">
@@ -58,8 +58,9 @@ function isActive(href: string) {
     gap: 0.55rem;
     color: var(--ink);
     font-family: var(--serif);
-    font-size: 1.35rem;
-    letter-spacing: 0.02em;
+    font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
   .nav__brand:hover {
     color: var(--ink);
@@ -101,7 +102,7 @@ function isActive(href: string) {
     border-radius: 2px;
     background: var(--accent);
   }
-  @media (max-width: 560px) {
+  @media (max-width: 680px) {
     .nav__mark {
       display: none;
     }

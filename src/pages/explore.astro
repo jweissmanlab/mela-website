@@ -1,31 +1,108 @@
 ---
 import Base from '../layouts/Base.astro';
-import EmbedFrame from '../components/EmbedFrame.astro';
 import { SITE } from '../config/site';
+import { withBase } from '../lib/base';
+
+const TUTORIAL_URL =
+  'https://cellxgene.cziscience.com/docs/04__Analyze%20Public%20Data/4_1__Hosted%20Tutorials';
 ---
 
 <Base title="Explore" description="Browse the MELA single-cell atlas interactively.">
-  <section class="section container">
-    <div class="head prose">
-      <p class="eyebrow">Explore</p>
-      <h1>Browse the atlas interactively</h1>
-      <p class="lead">
-        The exploration tool lets you navigate the full MELA single-cell atlas —
-        search genes, inspect cell-type annotations, and follow lineage
-        structure across embryonic stages.
+  <section class="section">
+    <div class="container">
+      <div class="head prose">
+        <p class="eyebrow">Explore</p>
+        <h1>Browse the atlas interactively</h1>
+        <p class="lead">
+          <a href="https://github.com/colganwi/cellxlineage" target="_blank" rel="noopener noreferrer">
+            CELLxLINEAGE
+          </a> lets you navigate the full MELA single-cell atlas — search genes,
+          inspect cell-type annotations, and follow lineage structure across
+          embryonic stages.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="launch">
+        <a class="btn btn-primary" href={SITE.exploreUrl} target="_blank" rel="noopener noreferrer">
+          Launch viewer in new tab ↗
+        </a>
+      </div>
+
+      <!-- browser-framed screenshot (launches the live viewer in a new tab) -->
+      <figure class="shot">
+        <div class="shot__bar">
+          <span class="shot__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="shot__url">{SITE.exploreUrl.replace(/^https?:\/\//, '')}</span>
+          <a class="shot__open" href={SITE.exploreUrl} target="_blank" rel="noopener noreferrer">
+            Open ↗
+          </a>
+        </div>
+        <a
+          class="shot__img"
+          href={SITE.exploreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Launch the MELA exploration tool in a new tab"
+        >
+          <img
+            src={withBase('/img/explorer_screenshot.png')}
+            alt="Screenshot of the MELA single-cell exploration tool"
+            width="2928"
+            height="1598"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+      </figure>
+    </div>
+
+    <!-- linkage usage examples -->
+    <div class="container">
+      <h2 class="examples-head">Calculate ancestral linkage</h2>
+    </div>
+
+    <div class="container examples">
+      <figure class="example">
+        <img
+          src={withBase('/img/target_linkage_example.png')}
+          alt="Selecting a group of cells to compute normalized ancestral linkage"
+          width="1446"
+          height="799"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          Select a group of cells to calculate normalized ancestral linkage to
+          all other cells.
+        </figcaption>
+      </figure>
+
+      <figure class="example">
+        <img
+          src={withBase('/img/pairwise_linkage_example.png')}
+          alt="Coloring cells to compute pairwise ancestral linkage between categories"
+          width="1437"
+          height="805"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          Color cells to calculate pairwise ancestral linkage between all
+          categories.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <p class="learn">
+        To learn more, check out the
+        <a href={TUTORIAL_URL} target="_blank" rel="noopener noreferrer">
+          CELLxGENE tutorial
+        </a>.
       </p>
     </div>
-
-    <div class="embed-wrap">
-      <EmbedFrame src={SITE.exploreUrl} title="MELA data exploration tool" />
-    </div>
-
-    <p class="note">
-      Hosted on the institute network. If the viewer above is blank, use
-      <a href={SITE.exploreUrl} target="_blank" rel="noopener noreferrer">
-        Open in new tab
-      </a>. A public link will replace this embed once available.
-    </p>
   </section>
 </Base>
 
@@ -33,12 +110,99 @@ import { SITE } from '../config/site';
   .head {
     margin-bottom: 2rem;
   }
-  .embed-wrap {
-    margin-top: 1rem;
+
+  /* browser-chrome frame around the screenshot */
+  .shot {
+    margin: 0;
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background: #fff;
   }
-  .note {
-    margin-top: 1rem;
-    font-size: var(--fs-small);
+  .shot__bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+  }
+  .shot__dots {
+    display: inline-flex;
+    gap: 5px;
+  }
+  .shot__dots i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--rule-strong);
+  }
+  .shot__url {
+    flex: 1;
+    font-family: var(--mono);
+    font-size: var(--fs-tiny);
     color: var(--ink-3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .shot__open {
+    font-size: var(--fs-tiny);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .shot__img {
+    display: block;
+  }
+  .shot__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .launch {
+    margin-bottom: 1rem;
+  }
+
+  .examples-head {
+    margin: clamp(2rem, 1.5rem + 2vw, 3.5rem) 0 0;
+  }
+
+  /* side-by-side examples */
+  .examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.25rem, 0.75rem + 2vw, 2.5rem);
+    margin-top: 1.5rem;
+  }
+  .example {
+    margin: 0;
+  }
+  .example img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-sm);
+  }
+  .example figcaption {
+    margin-top: 0.85rem;
+    font-size: var(--fs-small);
+    color: var(--ink-2);
+    max-width: 46ch;
+  }
+
+  .learn {
+    margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+    color: var(--ink-2);
+    font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+  }
+
+  @media (max-width: 720px) {
+    .examples {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
