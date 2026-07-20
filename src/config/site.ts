@@ -10,7 +10,7 @@ export const SITE = {
   zenodoRecordUrl: 'https://zenodo.org/records/0000000',
   zenodoDoi: '10.5281/zenodo.0000000',
   githubUrl: 'https://github.com/jweissmanlab/mela-website',
-  paperUrl: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v1',
+  paperUrl: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v2',
   contactEmail: 'wcolgan@wi.mit.edu',
 };
 
