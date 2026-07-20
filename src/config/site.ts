@@ -41,5 +41,5 @@ export const CITATION = {
   journal: 'bioRxiv',
   year: '2026',
   doi: '10.64898/2026.05.07.722278',
-  url: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v1',
+  url: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v2',
 };
