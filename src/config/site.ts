@@ -6,9 +6,8 @@ export const SITE = {
   tagline: 'A cell fate map of mammalian embryogenesis',
   // Data-exploration tool (public).
   exploreUrl: 'https://mela.explorer.wi.mit.edu',
-  // Placeholder — replace with the real Zenodo record.
-  zenodoRecordUrl: 'https://zenodo.org/records/0000000',
-  zenodoDoi: '10.5281/zenodo.0000000',
+  zenodoRecordUrl: 'https://zenodo.org/records/19892785',
+  zenodoDoi: '10.5281/zenodo.19892785',
   githubUrl: 'https://github.com/jweissmanlab/mela-website',
   paperUrl: 'https://www.biorxiv.org/content/10.64898/2026.05.07.722278v2',
   contactEmail: 'wcolgan@wi.mit.edu',

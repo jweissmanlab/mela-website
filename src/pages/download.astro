@@ -2,31 +2,23 @@
 import Base from '../layouts/Base.astro';
 import { SITE, CITATION } from '../config/site';
 
-const files = [
-  {
-    name: 'Processed single-cell atlas',
-    desc: 'AnnData (.h5ad) with transcriptomes, cell-type annotations, and embryo/stage metadata.',
-    format: 'h5ad',
-    size: '~— GB',
-  },
-  {
-    name: 'Reconstructed lineage trees',
-    desc: 'Per-embryo lineage trees with resolved cell divisions (Newick / TreeData).',
-    format: 'nwk / h5td',
-    size: '~— GB',
-  },
-  {
-    name: 'Lineage linkage matrices',
-    desc: 'Cell-type coupling matrices underlying the Linkage heatmap.',
-    format: 'csv',
-    size: '~— MB',
-  },
-  {
-    name: 'Fate-flow tables',
-    desc: 'Progenitor-to-fate flow tables underlying the Fate Sankey.',
-    format: 'csv',
-    size: '~— MB',
-  },
+const embryos = [
+  { file: 'E7.5-R1.h5td', stage: 'E7.5', replicate: 'R1', size: '97.2 MB' },
+  { file: 'E7.5-R2.h5td', stage: 'E7.5', replicate: 'R2', size: '116.4 MB' },
+  { file: 'E7.5-R3.h5td', stage: 'E7.5', replicate: 'R3', size: '104.5 MB' },
+  { file: 'E8.0-R1.h5td', stage: 'E8.0', replicate: 'R1', size: '233.3 MB' },
+  { file: 'E8.0-R2.h5td', stage: 'E8.0', replicate: 'R2', size: '389.9 MB' },
+  { file: 'E8.0-R3.h5td', stage: 'E8.0', replicate: 'R3', size: '311.3 MB' },
+  { file: 'E8.5-R1.h5td', stage: 'E8.5', replicate: 'R1', size: '1.4 GB' },
+  { file: 'E8.5-R2.h5td', stage: 'E8.5', replicate: 'R2', size: '2.2 GB' },
+  { file: 'E8.5-R3.h5td', stage: 'E8.5', replicate: 'R3', size: '1.5 GB' },
+  { file: 'E9.0-R1.h5td', stage: 'E9.0', replicate: 'R1', size: '4.2 GB' },
+  { file: 'E9.0-R2.h5td', stage: 'E9.0', replicate: 'R2', size: '5.2 GB' },
+  { file: 'E9.0-R3.h5td', stage: 'E9.0', replicate: 'R3', size: '3.3 GB' },
+  { file: 'E9.5-R1.h5td', stage: 'E9.5', replicate: 'R1', size: '17.5 GB' },
+  { file: 'E9.5-R2.h5td', stage: 'E9.5', replicate: 'R2', size: '13.3 GB' },
+  { file: 'E9.5-R3.h5td', stage: 'E9.5', replicate: 'R3', size: '13.0 GB' },
+  { file: 'E10.0-R1.h5td', stage: 'E10.0', replicate: 'R1', size: '17.4 GB' },
 ];
 
 const bibtex = `@article{colgan${CITATION.year}mela,
@@ -45,31 +37,41 @@ const bibtex = `@article{colgan${CITATION.year}mela,
       <p class="eyebrow">Download</p>
       <h1>Data &amp; archive</h1>
       <p class="lead">
-        The processed data, lineage trees, and analysis tables are archived on
-        Zenodo. Links below point to the record; individual files can be
-        downloaded there.
+        Per-embryo H5TD files — gene expression counts, cell metadata, and
+        lineage trees — are archived on Zenodo. Each box below links directly
+        to that embryo's file for download.
       </p>
       <a class="btn btn-primary" href={SITE.zenodoRecordUrl} target="_blank" rel="noopener">
         Open Zenodo record ↗
       </a>
-      <p class="placeholder">
-        Zenodo record is a placeholder — update <code>zenodoRecordUrl</code> in
-        <code>src/config/site.ts</code> once the DOI is minted.
-      </p>
     </div>
+
+    <p class="tools-note">
+      H5TD files containing gene expression counts, cell meta data, and
+      lineage trees can be loaded using{' '}
+      <a href="https://treedata.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener noreferrer">TreeData</a>{' '}
+      and analyzed using{' '}
+      <a href="https://pycea.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Pycea</a>,
+      or visualized directly using{' '}
+      <a href="https://github.com/colganwi/cellxlineage" target="_blank" rel="noopener noreferrer">CELLxLINEAGE</a>.
+    </p>
 
     <ul class="files">
       {
-        files.map((f) => (
+        embryos.map((e) => (
           <li class="card file">
             <div class="file__main">
-              <h3>{f.name}</h3>
-              <p>{f.desc}</p>
+              <h3>{e.stage} · {e.replicate}</h3>
             </div>
             <div class="file__meta">
-              <span class="tag">{f.format}</span>
-              <span class="file__size">{f.size}</span>
-              <a class="btn btn-ghost" href={SITE.zenodoRecordUrl} target="_blank" rel="noopener">
+              <span class="tag">h5td</span>
+              <span class="file__size">{e.size}</span>
+              <a
+                class="btn btn-ghost"
+                href={`${SITE.zenodoRecordUrl}/files/${e.file}?download=1`}
+                target="_blank"
+                rel="noopener"
+              >
                 Download ↗
               </a>
             </div>
@@ -96,10 +98,15 @@ const bibtex = `@article{colgan${CITATION.year}mela,
   .head {
     margin-bottom: 2.5rem;
   }
-  .placeholder {
-    margin-top: 1rem;
-    font-size: var(--fs-small);
-    color: var(--ink-3);
+  .tools-note {
+    margin: 0 0 2rem;
+    font-size: var(--fs-body);
+    color: var(--ink-2);
+    max-width: none;
+  }
+  .tools-note a {
+    color: var(--accent);
+    font-weight: 600;
   }
   code {
     font-family: var(--mono);
@@ -120,7 +127,7 @@ const bibtex = `@article{colgan${CITATION.year}mela,
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 1.25rem 1.5rem;
+    padding: 0.85rem 1.5rem;
     flex-wrap: wrap;
   }
   .file__main {
@@ -128,11 +135,6 @@ const bibtex = `@article{colgan${CITATION.year}mela,
     min-width: 240px;
   }
   .file__main h3 {
-    margin-bottom: 0.2rem;
-  }
-  .file__main p {
-    color: var(--ink-2);
-    font-size: var(--fs-small);
     margin: 0;
   }
   .file__meta {
