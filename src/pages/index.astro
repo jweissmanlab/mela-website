@@ -131,23 +131,55 @@ const cards = [
         <p class="eyebrow">Funding</p>
         <p>
           The generation of this data was supported by the
-          <strong>CZ Biohub Billion Cells Project</strong>.
+          <strong>CZ Biohub Billion Cells Project</strong>, the
+          <strong>Howard Hughes Medical Institute</strong>, and an
+          <strong>NIH Center of Excellence in Genomic Science (CEGS)</strong> award.
         </p>
       </div>
-      <a
-        class="funding__logo"
-        href="https://www.czbiohub.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="CZ Biohub"
-      >
-        <img
-          src={withBase('/img/biohub-logo@4x.png')}
-          alt="CZ Biohub"
-          width="524"
-          height="164"
-        />
-      </a>
+      <div class="funding__logos">
+        <a
+          class="funding__logo"
+          href="https://www.czbiohub.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="CZ Biohub"
+        >
+          <img
+            src={withBase('/img/biohub-logo@4x.png')}
+            alt="CZ Biohub"
+            width="524"
+            height="164"
+          />
+        </a>
+        <a
+          class="funding__logo"
+          href="https://www.hhmi.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Howard Hughes Medical Institute"
+        >
+          <img
+            src={withBase('/img/HHMI-vertical-signature-color.jpg')}
+            alt="Howard Hughes Medical Institute"
+            width="883"
+            height="574"
+          />
+        </a>
+        <a
+          class="funding__logo"
+          href="https://www.genome.gov/Funded-Programs-Projects/Centers-of-Excellence-in-Genomic-Science"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="NIH Center of Excellence in Genomic Science"
+        >
+          <img
+            src={withBase('/img/NIH_Master_Logo_Vertical_2Color.png')}
+            alt="NIH Center of Excellence in Genomic Science"
+            width="374"
+            height="329"
+          />
+        </a>
+      </div>
     </div>
   </section>
 </Base>
@@ -253,6 +285,13 @@ const cards = [
     margin: 0;
     font-size: 1.1rem;
     color: var(--ink-2);
+  }
+  .funding__logos {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
   .funding__logo {
     flex: none;
