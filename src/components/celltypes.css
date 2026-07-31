@@ -296,22 +296,6 @@
   flex: 1;
   min-width: 0;
 }
-.ct-link__nov {
-  font-size: var(--fs-tiny);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
-  color: #fff;
-  background: #5fb2ad; /* novelty 1 */
-  white-space: nowrap;
-}
-.ct-link__nov[data-lvl='2'] {
-  background: #0e7c7b; /* accent teal */
-}
-.ct-link__nov[data-lvl='3'] {
-  background: #0a4f4d; /* dark teal */
-}
 .ct-link__swatch {
   flex: none;
   width: 14px;

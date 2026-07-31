@@ -198,16 +198,6 @@ function Detail({ d, showTip, hideTip }: { d: CTDetail; showTip: ShowTip; hideTi
             {d.topLinks.map((l) => (
               <li key={l.partner} className="ct-link">
                 <span className="ct-link__name">{l.partner}</span>
-                {l.novelty > 0 && (
-                  <span
-                    className="ct-link__nov"
-                    data-lvl={l.novelty}
-                    onMouseMove={l.explanation ? (e) => showTip(l.explanation, e) : undefined}
-                    onMouseLeave={hideTip}
-                  >
-                    Novelty score {l.novelty}
-                  </span>
-                )}
                 <span
                   className="ct-link__swatch"
                   style={{ background: l.normValue != null ? (linkColor(l.normValue) as string) : '#eee' }}
@@ -216,7 +206,6 @@ function Detail({ d, showTip, hideTip }: { d: CTDetail; showTip: ShowTip; hideTi
               </li>
             ))}
           </ul>
-          <p className="ct-hint">Hover a novelty score for the proposed explanation.</p>
         </div>
       )}
     </div>
