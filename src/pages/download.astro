@@ -1,6 +1,13 @@
 ---
+import { statSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import Base from '../layouts/Base.astro';
 import { SITE, CITATION } from '../config/site';
+import { withBase } from '../lib/base';
+
+const programsCsvSize = `${(
+  statSync(fileURLToPath(new URL('../../public/downloads/annotated_programs.csv', import.meta.url))).size / 1024
+).toFixed(0)} KB`;
 
 const embryos = [
   { file: 'E7.5-R1.h5td', stage: 'E7.5', replicate: 'R1', size: '97.2 MB' },
@@ -80,6 +87,23 @@ const bibtex = `@article{colgan${CITATION.year}mela,
       }
     </ul>
 
+    <h2 class="files-h">Gene programs</h2>
+    <ul class="files">
+      <li class="card file">
+        <div class="file__main">
+          <h3>Gene program annotations</h3>
+          <p>All 70 programs — genes, size, active cell types, name, and description (Table S5).</p>
+        </div>
+        <div class="file__meta">
+          <span class="tag">csv</span>
+          <span class="file__size">{programsCsvSize}</span>
+          <a class="btn btn-ghost" href={withBase('/downloads/annotated_programs.csv')} download>
+            Download
+          </a>
+        </div>
+      </li>
+    </ul>
+
     <div class="cite-block card">
       <p class="eyebrow">Cite this dataset</p>
       <p class="cite-block__ref">
@@ -115,6 +139,10 @@ const bibtex = `@article{colgan${CITATION.year}mela,
     padding: 0.1em 0.35em;
     border-radius: 4px;
   }
+  .files-h {
+    font-size: var(--fs-h3);
+    margin: 0 0 1rem;
+  }
   .files {
     list-style: none;
     margin: 0 0 3rem;
@@ -136,6 +164,11 @@ const bibtex = `@article{colgan${CITATION.year}mela,
   }
   .file__main h3 {
     margin: 0;
+  }
+  .file__main p {
+    margin: 0.2rem 0 0;
+    font-size: var(--fs-small);
+    color: var(--ink-2);
   }
   .file__meta {
     display: flex;

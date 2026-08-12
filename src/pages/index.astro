@@ -26,6 +26,11 @@ const cards = [
     body: 'The cell-type hierarchy with UMAPs, markers, and lineage statistics.',
   },
   {
+    href: '/programs',
+    title: 'Gene programs',
+    body: 'Covarying gene programs and their pairwise correlation structure.',
+  },
+  {
     href: '/download',
     title: 'Download',
     body: 'Get the processed data and lineage trees from the Zenodo archive.',
@@ -237,7 +242,7 @@ const cards = [
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-top: 1.5rem;
   }
@@ -325,10 +330,16 @@ const cards = [
     .grid-2 {
       grid-template-columns: 1fr;
     }
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   @media (max-width: 480px) {
     .stats {
       grid-template-columns: 1fr 1fr;
+    }
+    .cards {
+      grid-template-columns: 1fr;
     }
   }
 </style>

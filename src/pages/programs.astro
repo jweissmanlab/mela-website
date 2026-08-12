@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import GeneProgramExplorer from '../components/GeneProgramExplorer';
+---
+
+<Base
+  title="Gene programs"
+  description="Explore covarying gene programs and their pairwise correlation structure across the atlas."
+>
+  <section class="section container">
+    <div class="head prose">
+      <p class="eyebrow">Gene programs</p>
+      <h1>Programs of covarying genes</h1>
+      <p class="lead">
+        Genes were grouped into programs whose expression covaries locally
+        along the lineage tree (using{' '}
+        <a href="https://hotspot.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Hotspot</a>).
+        The heatmap shows the local correlation between every pair of genes;
+        colored strips mark each gene's program. Choose a program from the
+        dropdown, or click its strip, to zoom in and see individual gene
+        names alongside its UMAP, description, and full gene list.
+      </p>
+    </div>
+
+    <GeneProgramExplorer client:load />
+  </section>
+</Base>
+
+<style>
+  .head {
+    margin-bottom: 2rem;
+  }
+</style>

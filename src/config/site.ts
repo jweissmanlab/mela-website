@@ -28,6 +28,7 @@ export const NAV = [
   { href: '/linkage', label: 'Linkage' },
   { href: '/fate', label: 'Fate' },
   { href: '/celltypes', label: 'Cell types' },
+  { href: '/programs', label: 'Gene programs' },
   { href: '/download', label: 'Download' },
 ];
 

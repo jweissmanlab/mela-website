@@ -2,6 +2,14 @@ import { withBase } from './base';
 
 export const dataUrl = (name: string) => withBase(`/data/${name}`);
 
+// binary data files (e.g. the gene programs correlation matrix) are shipped
+// as flat typed arrays instead of JSON — much smaller and no parse cost.
+export async function fetchInt16(name: string): Promise<Int16Array> {
+  const res = await fetch(dataUrl(name));
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return new Int16Array(await res.arrayBuffer());
+}
+
 // ---- Linkage (entity × entity, per stage × level) ----
 export interface LinkageManifest {
   stages: string[];
@@ -81,4 +89,24 @@ export interface CTDetail {
 export interface CellTypeData {
   tree: CTNode;
   details: Record<string, CTDetail>;
+}
+
+// ---- Gene programs page ----
+export interface ProgramEntry {
+  id: string;
+  name: string;
+  description: string;
+  size: number;
+  activeIn: string[];
+  genes: string[];
+  start: number; // index range of this program's genes in geneOrder
+  end: number;
+  umap: string | null;
+  color: string;
+}
+export interface ProgramManifest {
+  n: number; // matrix dimension (genes)
+  geneOrder: string[]; // gene at each row/col index, grouped by program
+  programs: ProgramEntry[];
+  scale: { factor: number; vmin: number; vmax: number; label: string };
 }
