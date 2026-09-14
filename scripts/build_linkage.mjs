@@ -33,6 +33,7 @@ const LINEAGE_PALETTE = {
   'Neural crest': '#7C0EDD',
   'Extraembryonic ectoderm': '#262C6B',
   Mesoderm: '#CD2626',
+  'Mesoderm (other)': '#8C5E58',
   'Lateral plate mesoderm': '#7F0303',
   'Intermediate mesoderm': '#FFC0CB',
   'Paraxial mesoderm': '#FF7D7D',

@@ -73,7 +73,7 @@ Trigeminal placode,Trigeminal placode,Surface ectoderm,Surface ectoderm,Ectoderm
 Trigeminal sensory neuron,Trigeminal sensory neuron,Surface ectoderm,Surface ectoderm,Ectoderm,#b77b68,49,49,#b77b68
 Definitive endoderm,Definitive endoderm,Early,Endoderm,Endoderm,#922329,50,50,#922329
 Gut,Gut,Early,Endoderm,Endoderm,#6b002c,51,51,#6b002c
-Prechordal plate,Prechordal plate,Endoderm and notochord,Mesoderm,Mesoderm,#5b4534,52,52,#5b4534
+Prechordal plate,Prechordal plate,Endoderm and notochord,Mesoderm (other),Mesoderm,#5b4534,52,52,#5b4534
 Foregut,Foregut,Endoderm and notochord,Endoderm,Endoderm,#0cbd66,53,53a,#0cbd66
 Pancreatic-biliary progenitor,Foregut,Endoderm and notochord,Endoderm,Endoderm,#0cbd66,53,53b,#9467bd
 Respiratory progenitor,Foregut,Endoderm and notochord,Endoderm,Endoderm,#0cbd66,53,53c,#8c564b
@@ -91,7 +91,7 @@ Macrophage,Macrophage,Blood and endothelial,Blood,Mesoderm,#575329,63,63,#575329
 Megakaryocyte,Megakaryocyte,Blood and endothelial,Blood,Mesoderm,#d790ff,64,64,#d790ff
 Primitive erythrocyte,Primitive erythrocyte,Blood and endothelial,Blood,Mesoderm,#0000a6,65,65,#0000a6
 Allantoic endothelial progenitor,Allantoic endothelial progenitor,Blood and endothelial,Extraembryonic mesoderm,Mesoderm,#fad09f,66,66,#fad09f
-Endothelial cell,Endothelial cell,Blood and endothelial,Mesoderm,Mesoderm,#ba0900,67,67a,#ba0900
+Endothelial cell,Endothelial cell,Blood and endothelial,Mesoderm (other),Mesoderm,#ba0900,67,67a,#ba0900
 Yolk sac endothelial cell,Endothelial cell,Blood and endothelial,Extraembryonic mesoderm,Mesoderm,#ba0900,67,67b,#17a398
 Allantois,Allantois,Extraembryonic and PGC,Extraembryonic mesoderm,Mesoderm,#d16100,68,68,#d16100
 Extraembryonic mesoderm,Extraembryonic mesoderm,Extraembryonic and PGC,Extraembryonic mesoderm,Mesoderm,#ffaa92,69,69,#ffaa92
@@ -122,13 +122,13 @@ Splanchnic mesoderm (cardiopulmonary),Splanchnic mesoderm,Splanchnic mesoderm,La
 Splanchnic mesoderm (gastric),Splanchnic mesoderm,Splanchnic mesoderm,Lateral plate mesoderm,Mesoderm,#ffdbe5,80,80c,#4ecdc4
 Splanchnic mesoderm (intestinal),Splanchnic mesoderm,Splanchnic mesoderm,Lateral plate mesoderm,Mesoderm,#ffdbe5,80,80d,#556270
 Splanchnic mesoderm (septum transversum),Splanchnic mesoderm,Splanchnic mesoderm,Lateral plate mesoderm,Mesoderm,#ffdbe5,80,80e,#c44d58
-Anterior mesoderm,Anterior mesoderm,Early,Mesoderm,Mesoderm,#8cd0ff,81,81,#8cd0ff
-Nascent mesoderm,Nascent mesoderm,Early,Mesoderm,Mesoderm,#9b9700,82,82,#9b9700
-Arterial endothelial cell,Arterial endothelial cell,Blood and endothelial,Mesoderm,Mesoderm,#b05b6f,83,83,#b05b6f
+Anterior mesoderm,Anterior mesoderm,Early,Mesoderm (other),Mesoderm,#8cd0ff,81,81,#8cd0ff
+Nascent mesoderm,Nascent mesoderm,Early,Mesoderm (other),Mesoderm,#9b9700,82,82,#9b9700
+Arterial endothelial cell,Arterial endothelial cell,Blood and endothelial,Mesoderm (other),Mesoderm,#b05b6f,83,83,#b05b6f
 Endocardial cell,Endocardial cell,Blood and endothelial,Lateral plate mesoderm,Mesoderm,#34362d,84,84,#34362d
-Endothelial progenitor,Endothelial progenitor,Blood and endothelial,Mesoderm,Mesoderm,#eec3ff,85,85,#eec3ff
-Hematoendothelial progenitor,Hematoendothelial progenitor,Blood and endothelial,Mesoderm,Mesoderm,#3a2465,86,86,#3a2465
-Notochord,Notochord,Endoderm and notochord,Mesoderm,Mesoderm,#b4a8bd,87,87,#b4a8bd
+Endothelial progenitor,Endothelial progenitor,Blood and endothelial,Mesoderm (other),Mesoderm,#eec3ff,85,85,#eec3ff
+Hematoendothelial progenitor,Hematoendothelial progenitor,Blood and endothelial,Mesoderm (other),Mesoderm,#3a2465,86,86,#3a2465
+Notochord,Notochord,Endoderm and notochord,Mesoderm (other),Mesoderm,#b4a8bd,87,87,#b4a8bd
 Pharyngeal mesoderm,Pharyngeal mesoderm,Splanchnic mesoderm,Paraxial mesoderm,Mesoderm,#b903aa,88,88,#b903aa
 Dermomyotome,Dermomyotome,Paraxial mesoderm,Paraxial mesoderm,Mesoderm,#ff4a46,89,89,#ff4a46
 Head paraxial mesoderm,Head paraxial mesoderm,Paraxial mesoderm,Paraxial mesoderm,Mesoderm,#006fa6,90,90,#006fa6
@@ -139,5 +139,5 @@ Periocular mesoderm,Periocular mesoderm,Paraxial mesoderm,Paraxial mesoderm,Meso
 Presomitic mesoderm,Presomitic mesoderm,Paraxial mesoderm,Paraxial mesoderm,Mesoderm,#4fc601,95,95,#4fc601
 Sclerotome,Sclerotome,Paraxial mesoderm,Paraxial mesoderm,Mesoderm,#ffff00,96,96,#ffff00
 Primordial germ cell,Primordial germ cell,Extraembryonic and PGC,Primordial germ cell,Primordial germ cell,#201625,97,97,#201625
-Hemogenic endothelium,Hemogenic endothelium,Blood and endothelial,Mesoderm,Mesoderm,#aa00ff,98,98,#aa00ff
+Hemogenic endothelium,Hemogenic endothelium,Blood and endothelial,Mesoderm (other),Mesoderm,#aa00ff,98,98,#aa00ff
 Hematopoietic progenitor,Hematopoietic progenitor,Blood and endothelial,Blood,Mesoderm,#a05d78,99,99,#a05d78

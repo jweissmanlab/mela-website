@@ -403,7 +403,7 @@ source_time,target_time,source,target,count
 6.5,7.0,Uncommitted,Uncommitted,450
 6.5,7.0,Uncommitted,Sclerotome,43
 6.5,7.0,Uncommitted,Spinal cord (thoracic),10
-6.5,7.0,Mesoderm,Mesoderm,375
+6.5,7.0,Mesoderm,Mesoderm,373
 6.5,7.0,Somatic mesoderm,Somatic mesoderm,29
 6.5,7.0,Endothelial cell,Endothelial cell,15
 6.5,7.0,Uncommitted,Mesoderm,178
@@ -537,6 +537,7 @@ source_time,target_time,source,target,count
 6.5,7.0,Uncommitted,Extraembryonic mesoderm,19
 6.5,7.0,Endocardial cell,Endocardial cell,13
 6.5,7.0,Pharyngeal endoderm,Pharyngeal endoderm,28
+6.5,7.0,Mesoderm,Mesoderm (other),2
 6.5,7.0,Second heart field,Second heart field,8
 6.5,7.0,Mesoderm,Forelimb field,5
 6.5,7.0,Mesoderm,Macrophage,5
@@ -684,8 +685,8 @@ source_time,target_time,source,target,count
 7.0,7.5,Mesoderm,Pharyngeal mesoderm,57
 7.0,7.5,Mesoderm,Second heart field,58
 7.0,7.5,Mesoderm,First heart field,30
-7.0,7.5,Mesoderm,Mesoderm,759
-7.0,7.5,Mesoderm,Endothelial cell,153
+7.0,7.5,Mesoderm,Mesoderm,750
+7.0,7.5,Mesoderm,Endothelial cell,150
 7.0,7.5,Mesoderm,Lateral plate mesoderm,193
 7.0,7.5,Somatic mesoderm,Somatic mesoderm,97
 7.0,7.5,Endothelial cell,Endothelial cell,87
@@ -730,7 +731,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Endoderm,Hindgut,26
 7.0,7.5,Forelimb field,Forelimb field,28
 7.0,7.5,Notochord,Notochord,99
-7.0,7.5,Uncommitted,Mesoderm,246
+7.0,7.5,Uncommitted,Mesoderm,245
 7.0,7.5,Neural ectoderm,Cranial motor neuron,7
 7.0,7.5,Neural ectoderm,Floor plate,40
 7.0,7.5,Cranial neural crest,Cranial neural crest,15
@@ -854,7 +855,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Neural crest,Frontonasal mesenchyme,17
 7.0,7.5,Ectoderm,Eye field,11
 7.0,7.5,Hindgut,Hindgut,63
-7.0,7.5,Mesoderm,Notochord,14
+7.0,7.5,Mesoderm,Notochord,13
 7.0,7.5,Mesoderm,Mesothelium,1
 7.0,7.5,Mesoderm,Splanchnic mesoderm,60
 7.0,7.5,Mesoderm,Forelimb field,22
@@ -893,6 +894,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Uncommitted,Pharyngeal endoderm,32
 7.0,7.5,Uncommitted,Endoderm,15
 7.0,7.5,Mesoderm,Pharyngeal endoderm,4
+7.0,7.5,Mesoderm (other),Mesoderm (other),2
 7.0,7.5,Mesoderm,Hypothalamus,1
 7.0,7.5,Mesoderm,Epidermal progenitor,5
 7.0,7.5,Mesoderm,Spinal cord (cervical),1
@@ -918,7 +920,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Roof plate,Roof plate,6
 7.0,7.5,Ectoderm,Head paraxial mesoderm,1
 7.0,7.5,Mesoderm,Endocardial cell,25
-7.0,7.5,Mesoderm,Arterial endothelial cell,19
+7.0,7.5,Mesoderm,Arterial endothelial cell,18
 7.0,7.5,Mesoderm,Hypaxial myogenic progenitor,5
 7.0,7.5,Mesoderm,Amniotic ectoderm,3
 7.0,7.5,Blood,Macrophage,22
@@ -962,6 +964,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Surface ectoderm,Epibranchial placode,2
 7.0,7.5,Epicardium,Epicardium,9
 7.0,7.5,Endoderm,Sclerotome,1
+7.0,7.5,Uncommitted,Mesoderm (other),2
 7.0,7.5,Uncommitted,Olfactory placode,9
 7.0,7.5,Ectoderm,Sclerotome,1
 7.0,7.5,Ectoderm,Hypothalamic neuron,1
@@ -995,7 +998,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Mesoderm,Surface ectoderm,1
 7.0,7.5,Mesoderm,Dorsal root ganglion progenitor,1
 7.0,7.5,Mesoderm,Pharyngeal arch mesenchyme,2
-7.0,7.5,Mesoderm,Endothelial progenitor,8
+7.0,7.5,Mesoderm,Endothelial progenitor,7
 7.0,7.5,Neural ectoderm,Endocardial cell,1
 7.0,7.5,Neural ectoderm,Extraembryonic mesoderm,1
 7.0,7.5,Mesoderm,Blood,2
@@ -1045,9 +1048,9 @@ source_time,target_time,source,target,count
 7.5,8.0,Second heart field,Second heart field,212
 7.5,8.0,First heart field,First heart field,238
 7.5,8.0,Mesoderm,Second heart field,126
-7.5,8.0,Mesoderm,Mesoderm,1266
+7.5,8.0,Mesoderm,Mesoderm,1248
 7.5,8.0,Endothelial cell,Endothelial cell,398
-7.5,8.0,Mesoderm,Endothelial cell,403
+7.5,8.0,Mesoderm,Endothelial cell,392
 7.5,8.0,Mesoderm,Pharyngeal mesoderm,214
 7.5,8.0,Mesoderm,First heart field,24
 7.5,8.0,Lateral plate mesoderm,Lateral plate mesoderm,1039
@@ -1090,7 +1093,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Midgut,Midgut,189
 7.5,8.0,Foregut,Foregut,183
 7.5,8.0,Hindgut,Hindgut,203
-7.5,8.0,Uncommitted,Mesoderm,239
+7.5,8.0,Uncommitted,Mesoderm,238
 7.5,8.0,Uncommitted,Axial progenitor,14
 7.5,8.0,Endoderm,Hepatoblast,48
 7.5,8.0,Endoderm,Foregut,94
@@ -1134,7 +1137,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Epidermal progenitor,Epidermal progenitor,547
 7.5,8.0,Frontonasal mesenchyme,Frontonasal mesenchyme,490
 7.5,8.0,Paraxial mesoderm,Pharyngeal mesoderm,85
-7.5,8.0,Mesoderm,Arterial endothelial cell,31
+7.5,8.0,Mesoderm,Arterial endothelial cell,25
 7.5,8.0,Lateral plate mesoderm,Second heart field,180
 7.5,8.0,Lateral plate mesoderm,Splanchnic mesoderm,312
 7.5,8.0,Mesoderm,Head paraxial mesoderm,266
@@ -1221,7 +1224,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Uncommitted,Midgut,4
 7.5,8.0,Uncommitted,Frontonasal mesenchyme,43
 7.5,8.0,Somatic motor neuron,Somatic motor neuron,15
-7.5,8.0,Mesoderm,Endothelial progenitor,32
+7.5,8.0,Mesoderm,Endothelial progenitor,29
 7.5,8.0,Uncommitted,Splanchnic mesoderm,40
 7.5,8.0,Mesoderm,Spinal cord (thoracic),2
 7.5,8.0,Lateral plate mesoderm,Endothelial cell,57
@@ -1312,13 +1315,15 @@ source_time,target_time,source,target,count
 7.5,8.0,Surface ectoderm,Otic sensory neuron,19
 7.5,8.0,Uncommitted,Pharyngeal mesoderm,7
 7.5,8.0,Uncommitted,Midbrain,19
-7.5,8.0,Mesoderm,Notochord,12
+7.5,8.0,Mesoderm,Notochord,11
 7.5,8.0,Mesoderm,Epidermal progenitor,8
 7.5,8.0,Blood,Blood,9
 7.5,8.0,Uncommitted,Pharyngeal endoderm,16
 7.5,8.0,Mesoderm,Juxtacardiac field,18
 7.5,8.0,Mesoderm,Foregut,2
 7.5,8.0,Mesoderm,Midgut,1
+7.5,8.0,Mesoderm (other),Endothelial progenitor,3
+7.5,8.0,Mesoderm (other),Endothelial cell,11
 7.5,8.0,Uncommitted,Amniotic ectoderm,24
 7.5,8.0,Amniotic ectoderm,Amniotic ectoderm,130
 7.5,8.0,Endoderm,Periocular mesoderm,1
@@ -1333,6 +1338,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Uncommitted,Sacral neural crest,7
 7.5,8.0,Ectoderm,Head paraxial mesoderm,5
 7.5,8.0,Arterial endothelial cell,Arterial endothelial cell,40
+7.5,8.0,Mesoderm,Mesoderm (other),15
 7.5,8.0,Mesoderm,Extraembryonic mesoderm,65
 7.5,8.0,Mesoderm,Amniotic ectoderm,4
 7.5,8.0,Hematopoietic progenitor,Hematopoietic progenitor,8
@@ -1378,10 +1384,12 @@ source_time,target_time,source,target,count
 7.5,8.0,Surface ectoderm,Hindbrain (r2-r4),1
 7.5,8.0,Neural crest,Roof plate,5
 7.5,8.0,Lens placode,Lens placode,13
+7.5,8.0,Mesoderm (other),Mesoderm (other),4
 7.5,8.0,Ectoderm,Hypaxial myogenic progenitor,1
 7.5,8.0,Hemogenic endothelium,Hemogenic endothelium,3
 7.5,8.0,Neural ectoderm,Pharyngeal arch mesenchyme,5
 7.5,8.0,Neural ectoderm,Trigeminal ganglion neuron,1
+7.5,8.0,Mesoderm (other),Arterial endothelial cell,6
 7.5,8.0,Uncommitted,Epicardium,1
 7.5,8.0,Uncommitted,Epibranchial sensory neuron,3
 7.5,8.0,Neural ectoderm,Sclerotome,6
@@ -1461,15 +1469,15 @@ source_time,target_time,source,target,count
 8.0,8.5,Second heart field,Second heart field,746
 8.0,8.5,First heart field,First heart field,379
 8.0,8.5,Mesoderm,Head paraxial mesoderm,172
-8.0,8.5,Mesoderm,Endothelial progenitor,109
-8.0,8.5,Mesoderm,Endothelial cell,610
+8.0,8.5,Mesoderm,Endothelial progenitor,105
+8.0,8.5,Mesoderm,Endothelial cell,593
 8.0,8.5,Endothelial cell,Endothelial cell,1169
 8.0,8.5,Mesoderm,Pharyngeal mesoderm,355
 8.0,8.5,Lateral plate mesoderm,Lateral plate mesoderm,1647
 8.0,8.5,Lateral plate mesoderm,First heart field,50
 8.0,8.5,Juxtacardiac field,Juxtacardiac field,151
 8.0,8.5,Somatic mesoderm,Somatic mesoderm,2577
-8.0,8.5,Mesoderm,Mesoderm,1292
+8.0,8.5,Mesoderm,Mesoderm,1278
 8.0,8.5,Mesoderm,Sclerotome,721
 8.0,8.5,Mesoderm,Dermomyotome,637
 8.0,8.5,Hindbrain (r5-r8),Hindbrain (r5-r8),707
@@ -1622,7 +1630,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Ectoderm,Frontonasal mesenchyme,607
 8.0,8.5,Ectoderm,Midbrain neuron,51
 8.0,8.5,Mesoderm,Splanchnic mesoderm,522
-8.0,8.5,Mesoderm,Arterial endothelial cell,45
+8.0,8.5,Mesoderm,Arterial endothelial cell,36
 8.0,8.5,Mesoderm,Frontonasal mesenchyme,3
 8.0,8.5,Mesoderm,Hindlimb field,126
 8.0,8.5,Mesoderm,Hypaxial myogenic progenitor,128
@@ -1637,7 +1645,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Paraxial mesoderm,Endocardial cell,5
 8.0,8.5,Hemogenic endothelium,Hemogenic endothelium,9
 8.0,8.5,Ectoderm,Hindbrain (isthmic organizer),21
-8.0,8.5,Mesoderm,Hemogenic endothelium,11
+8.0,8.5,Mesoderm,Hemogenic endothelium,9
 8.0,8.5,Mesoderm,Olfactory placode,1
 8.0,8.5,Lateral plate mesoderm,Hindlimb field,192
 8.0,8.5,Hindlimb field,Hindlimb field,66
@@ -1753,6 +1761,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Neural crest,Diencephalon,5
 8.0,8.5,Blood,Macrophage,8
 8.0,8.5,Blood,Hematopoietic progenitor,4
+8.0,8.5,Mesoderm,Mesoderm (other),9
 8.0,8.5,Uncommitted,Pharyngeal endoderm,9
 8.0,8.5,Mesoderm,First heart field,11
 8.0,8.5,Surface ectoderm,Foregut,1
@@ -1761,12 +1770,14 @@ source_time,target_time,source,target,count
 8.0,8.5,Uncommitted,Autonomic progenitor,5
 8.0,8.5,Neural ectoderm,Nascent somite,13
 8.0,8.5,Uncommitted,Myotome,5
-8.0,8.5,Mesoderm,Notochord,6
+8.0,8.5,Mesoderm,Notochord,5
 8.0,8.5,Ectoderm,Lens placode,29
 8.0,8.5,Endoderm,Splanchnic mesoderm,1
 8.0,8.5,Paraxial mesoderm,Spinal cord (sacral),3
 8.0,8.5,Ectoderm,Trigeminal sensory neuron,34
 8.0,8.5,Mesoderm,Endocardial cell,30
+8.0,8.5,Mesoderm (other),Arterial endothelial cell,10
+8.0,8.5,Mesoderm (other),Endothelial cell,17
 8.0,8.5,Hematopoietic progenitor,Hematopoietic progenitor,15
 8.0,8.5,Ectoderm,Epibranchial placode,15
 8.0,8.5,Ectoderm,Amniotic ectoderm,57
@@ -1790,6 +1801,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Paraxial mesoderm,Axial progenitor,4
 8.0,8.5,Neural ectoderm,Pharyngeal endoderm,1
 8.0,8.5,Ectoderm,Otic placode,17
+8.0,8.5,Mesoderm (other),Endothelial progenitor,5
 8.0,8.5,Neural crest,Spinal cord interneuron,5
 8.0,8.5,Neural crest,Hindbrain (r1),5
 8.0,8.5,Paraxial mesoderm,Pharyngeal endoderm,1
@@ -1798,6 +1810,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Uncommitted,Endothelial cell,13
 8.0,8.5,Paraxial mesoderm,Hindbrain (r5-r8),3
 8.0,8.5,Paraxial mesoderm,Somatic motor neuron,4
+8.0,8.5,Mesoderm (other),Mesoderm (other),6
 8.0,8.5,Uncommitted,Lens placode,8
 8.0,8.5,Lateral plate mesoderm,Hypaxial myogenic progenitor,4
 8.0,8.5,Mesoderm,Epidermal progenitor,22
@@ -1877,7 +1890,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Mesoderm,Otic placode,2
 8.0,8.5,Ectoderm,Splanchnic mesoderm,7
 8.0,8.5,Ectoderm,Lateral plate mesoderm,4
-8.0,8.5,Ectoderm,Mesoderm,1
+8.0,8.5,Ectoderm,Mesoderm (other),1
 8.0,8.5,Endoderm,Megakaryocyte,1
 8.0,8.5,Endoderm,Epidermal progenitor,2
 8.0,8.5,Endoderm,Floor plate,1
@@ -1993,7 +2006,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Notochord,Notochord,297
 8.5,9.0,Hypothalamus,Hypothalamus,1229
 8.5,9.0,Trigeminal ganglion neuron,Trigeminal ganglion neuron,288
-8.5,9.0,Mesoderm,Mesoderm,328
+8.5,9.0,Mesoderm,Mesoderm,326
 8.5,9.0,Neural ectoderm,Axial progenitor,66
 8.5,9.0,Hypothalamic neuron,Hypothalamic neuron,137
 8.5,9.0,Neural ectoderm,Cranial motor neuron,561
@@ -2055,7 +2068,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Ectoderm,Roof plate,225
 8.5,9.0,Paraxial mesoderm,Diencephalon,1
 8.5,9.0,Mesoderm,Hypaxial myogenic progenitor,114
-8.5,9.0,Mesoderm,Endothelial progenitor,207
+8.5,9.0,Mesoderm,Endothelial progenitor,200
 8.5,9.0,Amniotic ectoderm,Amniotic ectoderm,594
 8.5,9.0,Mesoderm,Hindbrain (r2-r4),3
 8.5,9.0,Mesoderm,Paraxial mesoderm,67
@@ -2089,7 +2102,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Ectoderm,Diencephalon,17
 8.5,9.0,Lateral plate mesoderm,Endothelial cell,151
 8.5,9.0,Mesoderm,Splanchnic mesoderm,423
-8.5,9.0,Mesoderm,Endothelial cell,312
+8.5,9.0,Mesoderm,Endothelial cell,297
 8.5,9.0,Hindlimb field,Hindlimb field,515
 8.5,9.0,Lateral plate mesoderm,Frontonasal mesenchyme,2
 8.5,9.0,Lateral plate mesoderm,Cranial neural crest,2
@@ -2103,7 +2116,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Hemogenic endothelium,Hemogenic endothelium,27
 8.5,9.0,Mesoderm,Lateral plate mesoderm,64
 8.5,9.0,Lateral plate mesoderm,Hindlimb field,771
-8.5,9.0,Mesoderm,Arterial endothelial cell,26
+8.5,9.0,Mesoderm,Arterial endothelial cell,19
 8.5,9.0,Lateral plate mesoderm,Allantois,4
 8.5,9.0,Ectoderm,Splanchnic mesoderm,8
 8.5,9.0,Ectoderm,Neural ectoderm,112
@@ -2198,7 +2211,8 @@ source_time,target_time,source,target,count
 8.5,9.0,Ectoderm,Midbrain,26
 8.5,9.0,Neural crest,Diencephalon,3
 8.5,9.0,Hematopoietic progenitor,Hematopoietic progenitor,23
-8.5,9.0,Mesoderm,Hemogenic endothelium,10
+8.5,9.0,Mesoderm (other),Arterial endothelial cell,7
+8.5,9.0,Mesoderm (other),Hemogenic endothelium,3
 8.5,9.0,Mesoderm,First heart field,2
 8.5,9.0,Uncommitted,Pharyngeal endoderm,5
 8.5,9.0,Mesoderm,Periocular mesoderm,11
@@ -2221,6 +2235,8 @@ source_time,target_time,source,target,count
 8.5,9.0,Neural ectoderm,Olfactory placode,11
 8.5,9.0,Neural ectoderm,Trigeminal ganglion neuron,4
 8.5,9.0,Ectoderm,Midbrain neuron,15
+8.5,9.0,Mesoderm (other),Endothelial progenitor,8
+8.5,9.0,Mesoderm (other),Endothelial cell,15
 8.5,9.0,Neural ectoderm,Autonomic progenitor,9
 8.5,9.0,Paraxial mesoderm,Hindbrain (r5-r8),5
 8.5,9.0,Paraxial mesoderm,Hindbrain (r2-r4),3
@@ -2237,6 +2253,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Mesoderm,Hindgut,3
 8.5,9.0,Neural ectoderm,Endothelial cell,1
 8.5,9.0,Paraxial mesoderm,Somatic motor neuron,3
+8.5,9.0,Mesoderm,Hemogenic endothelium,7
 8.5,9.0,Ectoderm,Somatic motor neuron,3
 8.5,9.0,Lateral plate mesoderm,Amniotic ectoderm,2
 8.5,9.0,Ectoderm,Trigeminal sensory neuron,6
@@ -2488,8 +2505,8 @@ source_time,target_time,source,target,count
 9.0,9.5,Paraxial mesoderm,Endothelial progenitor,14
 9.0,9.5,Mesothelium,Mesothelium,100
 9.0,9.5,Mesoderm,Hypaxial myogenic progenitor,7
-9.0,9.5,Mesoderm,Endothelial progenitor,46
-9.0,9.5,Mesoderm,Endothelial cell,16
+9.0,9.5,Mesoderm,Endothelial progenitor,44
+9.0,9.5,Mesoderm,Endothelial cell,13
 9.0,9.5,Ectoderm,Telencephalon,7
 9.0,9.5,Autonomic neuron,Autonomic neuron,44
 9.0,9.5,Ectoderm,Hindbrain (r2-r4),2
@@ -2628,6 +2645,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Mesoderm,Roof plate,1
 7.0,7.5,Dorsal root ganglion neuron,Dorsal root ganglion neuron,2
 7.0,7.5,Uncommitted,Epibranchial placode,8
+7.0,7.5,Mesoderm,Mesoderm (other),8
 7.0,7.5,Ectoderm,Arterial endothelial cell,1
 7.0,7.5,Uncommitted,Lens placode,5
 7.0,7.5,Surface ectoderm,Extraembryonic mesoderm,1
@@ -2644,6 +2662,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Lateral plate mesoderm,Megakaryocyte,1
 7.5,8.0,Uncommitted,Hemogenic endothelium,1
 7.5,8.0,Uncommitted,Arterial endothelial cell,3
+7.5,8.0,Uncommitted,Mesoderm (other),1
 7.5,8.0,Ectoderm,Somatic motor neuron,3
 7.5,8.0,Ectoderm,Sclerotome,4
 7.5,8.0,Mesoderm,Pharyngeal endoderm,3
@@ -2671,6 +2690,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Mesoderm,Eye field,1
 8.0,8.5,Lateral plate mesoderm,Spinal cord interneuron,1
 8.0,8.5,Paraxial mesoderm,Notochord,6
+8.0,8.5,Mesoderm (other),Notochord,1
 8.0,8.5,Ectoderm,Autonomic neuron,6
 8.0,8.5,Uncommitted,Second heart field,2
 8.0,8.5,Lateral plate mesoderm,Epidermal progenitor,4
@@ -2725,6 +2745,7 @@ source_time,target_time,source,target,count
 8.5,9.0,Blood,Hematopoietic progenitor,3
 8.5,9.0,Blood,Macrophage,3
 8.5,9.0,Neural ectoderm,Forelimb field,1
+8.5,9.0,Mesoderm,Mesoderm (other),2
 8.5,9.0,Mesoderm,Somatic motor neuron,1
 8.5,9.0,Uncommitted,Hypothalamus,3
 8.5,9.0,Paraxial mesoderm,Mesothelium,1
@@ -2763,6 +2784,8 @@ source_time,target_time,source,target,count
 9.0,9.5,Paraxial mesoderm,Second heart field,1
 9.0,9.5,Uncommitted,Trigeminal sensory neuron,1
 9.0,9.5,Uncommitted,Splanchnic mesoderm,1
+9.0,9.5,Mesoderm (other),Endothelial progenitor,2
+9.0,9.5,Mesoderm (other),Endothelial cell,3
 9.0,9.5,Neural ectoderm,Pharyngeal arch mesenchyme,5
 9.0,9.5,Surface ectoderm,Pharyngeal endoderm,2
 4.5,5.0,Uncommitted,Olfactory placode,1
@@ -2923,6 +2946,7 @@ source_time,target_time,source,target,count
 6.5,7.0,Ectoderm,Lateral plate mesoderm,1
 6.5,7.0,Uncommitted,Epibranchial sensory neuron,1
 6.5,7.0,Ectoderm,Spinal cord interneuron,2
+6.5,7.0,Uncommitted,Mesoderm (other),1
 7.0,7.5,Uncommitted,Macrophage,1
 7.0,7.5,Neural ectoderm,Head paraxial mesoderm,1
 7.0,7.5,Uncommitted,Epibranchial sensory neuron,3
@@ -2946,6 +2970,8 @@ source_time,target_time,source,target,count
 7.0,7.5,Mesoderm,Spinal cord (thoracic),1
 7.0,7.5,Mesoderm,Nascent somite,2
 7.0,7.5,Neural ectoderm,Second heart field,1
+7.0,7.5,Mesoderm (other),Arterial endothelial cell,2
+7.0,7.5,Mesoderm (other),Endothelial cell,3
 7.0,7.5,Ectoderm,Autonomic neuron,1
 7.0,7.5,Mesoderm,Hindbrain (r2-r4),1
 7.0,7.5,Paraxial mesoderm,Endothelial progenitor,2
@@ -2953,6 +2979,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Paraxial mesoderm,Frontonasal mesenchyme,1
 7.0,7.5,Lateral plate mesoderm,Frontonasal mesenchyme,1
 7.0,7.5,Endoderm,Intermediate mesoderm,1
+7.0,7.5,Mesoderm (other),Endothelial progenitor,1
 7.0,7.5,Lateral plate mesoderm,Mesothelium,1
 7.0,7.5,Lateral plate mesoderm,Hemogenic endothelium,1
 7.5,8.0,Endoderm,Sclerotome,1
@@ -2996,6 +3023,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Paraxial mesoderm,Hypothalamus,2
 8.0,8.5,Paraxial mesoderm,Eye field,2
 8.0,8.5,Neural ectoderm,Foregut,2
+8.0,8.5,Uncommitted,Mesoderm (other),1
 8.0,8.5,Surface ectoderm,Telencephalon,3
 8.0,8.5,Endoderm,Pharyngeal arch mesenchyme,1
 8.0,8.5,Surface ectoderm,Eye field,1
@@ -3019,6 +3047,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Surface ectoderm,Dorsal root ganglion neuron,1
 8.0,8.5,Surface ectoderm,Frontonasal mesenchyme,2
 8.0,8.5,Paraxial mesoderm,Epicardium,1
+8.0,8.5,Mesoderm (other),Hemogenic endothelium,2
 8.0,8.5,Surface ectoderm,Hindlimb field,1
 8.0,8.5,Mesoderm,Hindgut,1
 8.0,8.5,Paraxial mesoderm,Epidermal progenitor,1
@@ -3032,6 +3061,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Mesoderm,Foregut,1
 8.0,8.5,Surface ectoderm,Splanchnic mesoderm,3
 8.0,8.5,Neural crest,Endocardial cell,1
+8.5,9.0,Mesoderm (other),Notochord,1
 8.5,9.0,Paraxial mesoderm,Amniotic ectoderm,3
 8.5,9.0,Neural crest,Sclerotome,2
 8.5,9.0,Surface ectoderm,Foregut,1
@@ -3139,6 +3169,7 @@ source_time,target_time,source,target,count
 5.5,6.0,Mesoderm,Cranial neural crest,1
 6.0,6.5,Vagal neural crest,Vagal neural crest,1
 6.0,6.5,Paraxial mesoderm,Intermediate mesoderm,1
+6.0,6.5,Uncommitted,Mesoderm (other),1
 6.0,6.5,Uncommitted,Spinal cord (lumbar),1
 6.0,6.5,Uncommitted,Periocular mesoderm,1
 6.0,6.5,Surface ectoderm,Epidermal progenitor,1
@@ -3153,10 +3184,13 @@ source_time,target_time,source,target,count
 6.5,7.0,Mesoderm,Endoderm,2
 6.5,7.0,Paraxial mesoderm,Foregut,1
 6.5,7.0,Ectoderm,Eye field,2
+6.5,7.0,Mesoderm (other),Notochord,1
+6.5,7.0,Mesoderm (other),Endothelial cell,1
 6.5,7.0,Mesoderm,Hypothalamus,1
 6.5,7.0,Surface ectoderm,Floor plate,1
 6.5,7.0,Neural ectoderm,Foregut,1
 6.5,7.0,Mesoderm,Myotome,1
+6.5,7.0,Mesoderm (other),Mesoderm (other),1
 6.5,7.0,Ectoderm,Pharyngeal mesoderm,1
 6.5,7.0,Hypothalamic neuron,Hypothalamic neuron,1
 6.5,7.0,Mesoderm,Mesothelium,1
@@ -3171,6 +3205,7 @@ source_time,target_time,source,target,count
 7.0,7.5,Neural ectoderm,Somatic mesoderm,1
 7.0,7.5,Mesoderm,Trigeminal sensory neuron,1
 7.0,7.5,Neural ectoderm,Midgut,1
+7.0,7.5,Mesoderm (other),Notochord,1
 7.0,7.5,Endoderm,Splanchnic mesoderm,1
 7.0,7.5,Neural ectoderm,Pharyngeal arch mesenchyme,1
 7.0,7.5,Neural ectoderm,Frontonasal mesenchyme,1
@@ -3200,6 +3235,7 @@ source_time,target_time,source,target,count
 7.5,8.0,Mesoderm,Dorsal root ganglion neuron,1
 7.5,8.0,Paraxial mesoderm,Trigeminal sensory neuron,1
 7.5,8.0,Neural crest,Olfactory placode,1
+7.5,8.0,Mesoderm (other),Notochord,1
 7.5,8.0,Lateral plate mesoderm,Hindbrain (r1),1
 7.5,8.0,Endoderm,First heart field,2
 7.5,8.0,Mesoderm,Trigeminal sensory neuron,1
@@ -3329,7 +3365,7 @@ source_time,target_time,source,target,count
 6.5,7.0,Uncommitted,Hematopoietic progenitor,1
 6.5,7.0,Endoderm,Megakaryocyte,1
 6.5,7.0,Endoderm,Macrophage,1
-6.5,7.0,Ectoderm,Mesoderm,1
+6.5,7.0,Ectoderm,Mesoderm (other),1
 6.5,7.0,Dorsal root ganglion neuron,Dorsal root ganglion neuron,1
 6.5,7.0,Neural ectoderm,Nascent somite,1
 6.5,7.0,Neural ectoderm,Hemogenic endothelium,1
@@ -3378,6 +3414,7 @@ source_time,target_time,source,target,count
 8.0,8.5,Neural crest,Second heart field,1
 8.0,8.5,Paraxial mesoderm,Telencephalon,1
 8.5,9.0,Endoderm,Epibranchial placode,1
+8.5,9.0,Mesoderm (other),Mesoderm (other),1
 8.5,9.0,Endoderm,Somatic mesoderm,2
 8.5,9.0,Paraxial mesoderm,Trigeminal ganglion neuron,1
 8.5,9.0,Ectoderm,Lateral plate mesoderm,1
@@ -3388,6 +3425,7 @@ source_time,target_time,source,target,count
 9.0,9.5,Paraxial mesoderm,Somatic motor neuron,1
 9.0,9.5,Lateral plate mesoderm,Hindbrain (r2-r4),1
 9.0,9.5,Lateral plate mesoderm,Cranial neural crest,1
+9.0,9.5,Mesoderm (other),Arterial endothelial cell,1
 9.0,9.5,Neural crest,Splanchnic mesoderm,1
 9.0,9.5,Uncommitted,Dorsal root ganglion progenitor,1
 9.0,9.5,Ectoderm,Pharyngeal endoderm,1

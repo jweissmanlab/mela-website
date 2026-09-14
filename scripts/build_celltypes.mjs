@@ -60,6 +60,7 @@ const LINEAGE_PALETTE = {
   Epiblast: '#A983F2', 'Primordial germ cell': '#20C4AC', Ectoderm: '#1874CD',
   'Neural ectoderm': '#83A4FF', 'Surface ectoderm': '#75F6FC', 'Neural crest': '#7C0EDD',
   'Extraembryonic ectoderm': '#262C6B', Mesoderm: '#CD2626',
+  'Mesoderm (other)': '#8C5E58',
   'Lateral plate mesoderm': '#7F0303', 'Intermediate mesoderm': '#FFC0CB',
   'Paraxial mesoderm': '#FF7D7D', 'Extraembryonic mesoderm': '#D34818',
   Endoderm: '#FFE600', 'Extraembryonic endoderm': '#E69F00', Blood: '#009E73',

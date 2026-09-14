@@ -60,6 +60,7 @@ const PALETTE = {
   'Neural crest': '#7C0EDD',
   'Extraembryonic ectoderm': '#262C6B',
   // mesoderm lineages
+  'Mesoderm (other)': '#8C5E58',
   'Lateral plate mesoderm': '#7F0303',
   'Intermediate mesoderm': '#FFC0CB',
   'Paraxial mesoderm': '#FF7D7D',
@@ -77,6 +78,16 @@ for (const r of cells) {
 }
 const colorFor = (name) => PALETTE[name] || FALLBACK;
 
+// germ layers are an explicit, hardcoded set (matching GERM_ORDER in
+// build_celltypes.mjs) rather than inferred from a lineage row where
+// lineage === germ_layer. Some germ layers (Mesoderm) have no cell type
+// whose lineage is literally the bare germ-layer name — cell types that
+// are mesoderm-derived but don't fall under one of the four named
+// sub-lineages instead get their own "Mesoderm (other)" lineage bucket —
+// so that inference is unreliable. Keep in sync with build_celltypes.mjs's
+// GERM_PALETTE.
+const GERM_LAYERS = new Set(['Ectoderm', 'Mesoderm', 'Endoderm', 'Epiblast', 'Primordial germ cell']);
+
 // categories actually used in the flow data
 const used = new Set();
 for (const r of fate) {
@@ -92,12 +103,14 @@ for (const name of used) {
     categories[name] = { level: 'root', parent: null, color: colorFor(UNCOMMITTED) };
     continue;
   }
+  if (GERM_LAYERS.has(name)) {
+    categories[name] = { level: 'germ_layer', parent: UNCOMMITTED, color: colorFor(name) };
+    continue;
+  }
   const germ = lineageToGerm[name];
   if (!germ) {
     // unknown -> treat as top-level branch off Uncommitted
     categories[name] = { level: 'lineage', parent: UNCOMMITTED, color: colorFor(name) };
-  } else if (germ === name) {
-    categories[name] = { level: 'germ_layer', parent: UNCOMMITTED, color: colorFor(name) };
   } else {
     categories[name] = { level: 'lineage', parent: germ, color: colorFor(name) };
   }
