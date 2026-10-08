@@ -5,9 +5,24 @@ import Base from '../layouts/Base.astro';
 import { SITE, CITATION } from '../config/site';
 import { withBase } from '../lib/base';
 
-const programsCsvSize = `${(
-  statSync(fileURLToPath(new URL('../../public/downloads/annotated_programs.csv', import.meta.url))).size / 1024
-).toFixed(0)} KB`;
+const csvSize = (file: string) =>
+  `${(statSync(fileURLToPath(new URL(`../../public/downloads/${file}`, import.meta.url))).size / 1024).toFixed(0)} KB`;
+
+const supp = [
+  { file: 'Table_S1_embryo_statistics.csv', name: 'Embryo statistics', desc: 'Embryo-level sequencing and tracing statistics (Table S1).' },
+  { file: 'Table_S2_cell_subtypes.csv', name: 'Cell subtypes', desc: 'Cell subtypes with markers and rationale (Table S2).' },
+  { file: 'Table_S3_e9.5_linkage.csv', name: 'E9.5 pairwise linkage', desc: 'E9.5 pairwise linkage values with annotation (Table S3).' },
+  { file: 'Table_S4_e9.5_fate_restricted_clades.csv', name: 'Fate-restricted clades', desc: 'E9.5 fate-restricted clade statistics (Table S4).' },
+  { file: 'annotated_programs.csv', name: 'Gene program annotations', desc: 'All 70 programs — genes, size, active cell types, name, and description (Table S5).' },
+].map((t) => ({ ...t, size: csvSize(t.file) }));
+
+const tables = [
+  { file: 'E7.5-E10_cells.csv', name: 'Cell metadata', desc: 'Per-cell metadata for all embryos.', size: '358.8 MB' },
+  { file: 'E7.5-E10_characters.csv', name: 'Lineage characters', desc: 'Lineage-tracing character matrix.', size: '338.6 MB' },
+  { file: 'E7.5-E10_spatial_scores.csv', name: 'Spatial scores', desc: 'Per-cell spatial scores.', size: '114.8 MB' },
+  { file: 'E7.5-E10_umap.csv', name: 'UMAP', desc: 'UMAP embedding coordinates.', size: '91.6 MB' },
+  { file: 'E7.5-E10_scVI.csv', name: 'scVI', desc: 'scVI latent embedding.', size: '1.0 GB' },
+];
 
 const embryos = [
   { file: 'E7.5-R1.h5td', stage: 'E7.5', replicate: 'R1', size: '97.2 MB' },
@@ -45,8 +60,8 @@ const bibtex = `@article{colgan${CITATION.year}mela,
       <h1>Data &amp; archive</h1>
       <p class="lead">
         Per-embryo H5TD files — gene expression counts, cell metadata, and
-        lineage trees — are archived on Zenodo. Each box below links directly
-        to that embryo's file for download.
+        lineage trees — along with combined CSV tables are archived on Zenodo.
+        Each box below links directly to that file for download.
       </p>
       <a class="btn btn-primary" href={SITE.zenodoRecordUrl} target="_blank" rel="noopener">
         Open Zenodo record ↗
@@ -61,6 +76,14 @@ const bibtex = `@article{colgan${CITATION.year}mela,
       <a href="https://pycea.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Pycea</a>,
       or visualized directly using{' '}
       <a href="https://github.com/colganwi/cellxlineage" target="_blank" rel="noopener noreferrer">CELLxLINEAGE</a>.
+      R users can load H5TD files using{' '}
+      <a href="https://github.com/YosefLab/treedataR" target="_blank" rel="noopener noreferrer">TreeDataR</a>.
+    </p>
+
+    <p class="tools-note">
+      New to the data? The{' '}
+      <a href="https://pycea.readthedocs.io/en/latest/notebooks/mouse-embryo.html" target="_blank" rel="noopener noreferrer">mouse embryogenesis tutorial</a>{' '}
+      in the Pycea documentation is a good place to start analyzing it.
     </p>
 
     <ul class="files">
@@ -75,7 +98,7 @@ const bibtex = `@article{colgan${CITATION.year}mela,
               <span class="file__size">{e.size}</span>
               <a
                 class="btn btn-ghost"
-                href={`${SITE.zenodoRecordUrl}/files/${e.file}?download=1`}
+                href={`${SITE.zenodoFilesUrl}/files/${e.file}?download=1`}
                 target="_blank"
                 rel="noopener"
               >
@@ -87,21 +110,51 @@ const bibtex = `@article{colgan${CITATION.year}mela,
       }
     </ul>
 
-    <h2 class="files-h">Gene programs</h2>
+    <h2 class="files-h">Combined tables</h2>
     <ul class="files">
-      <li class="card file">
-        <div class="file__main">
-          <h3>Gene program annotations</h3>
-          <p>All 70 programs — genes, size, active cell types, name, and description (Table S5).</p>
-        </div>
-        <div class="file__meta">
-          <span class="tag">csv</span>
-          <span class="file__size">{programsCsvSize}</span>
-          <a class="btn btn-ghost" href={withBase('/downloads/annotated_programs.csv')} download>
-            Download
-          </a>
-        </div>
-      </li>
+      {
+        tables.map((t) => (
+          <li class="card file">
+            <div class="file__main">
+              <h3>{t.name}</h3>
+              <p>{t.desc}</p>
+            </div>
+            <div class="file__meta">
+              <span class="tag">csv</span>
+              <span class="file__size">{t.size}</span>
+              <a
+                class="btn btn-ghost"
+                href={`${SITE.zenodoFilesUrl}/files/${t.file}?download=1`}
+                target="_blank"
+                rel="noopener"
+              >
+                Download ↗
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2 class="files-h">Supplementary tables</h2>
+    <ul class="files">
+      {
+        supp.map((t) => (
+          <li class="card file">
+            <div class="file__main">
+              <h3>{t.name}</h3>
+              <p>{t.desc}</p>
+            </div>
+            <div class="file__meta">
+              <span class="tag">csv</span>
+              <span class="file__size">{t.size}</span>
+              <a class="btn btn-ghost" href={withBase(`/downloads/${t.file}`)} download>
+                Download
+              </a>
+            </div>
+          </li>
+        ))
+      }
     </ul>
 
     <div class="cite-block card">
